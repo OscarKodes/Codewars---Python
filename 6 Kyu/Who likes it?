@@ -1,0 +1,24 @@
+def likes(names):
+    
+    who = "no one"
+    verb = " likes "
+    amount = len(names)
+    
+    if amount > 0:
+        who = names[0]
+        
+        if amount > 1:
+            
+            verb = " like "
+            
+            if amount == 2:
+                who += " and " + names[1]
+            
+            elif amount == 3:
+                who += ", " + names[1] + " and " + names[2]
+                
+            else:
+                who += ", " + names[1] + " and " + str(amount - 2) + " others"
+    
+    
+    return who + verb + "this"
