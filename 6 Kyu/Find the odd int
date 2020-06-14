@@ -1,0 +1,24 @@
+def find_it(seq):
+    
+    seq.sort()
+    
+    count = 0;
+    currNum = None;
+
+    for num in seq:
+        
+        if currNum != num:
+        
+            if count % 2 == 1:
+                print("count", count)
+                print("num", num)
+                return currNum
+        
+            else:
+                currNum = num
+                count = 1
+            
+        else:
+            count += 1
+            
+    return currNum
