@@ -1,0 +1,12 @@
+def disemvowel(string):
+
+    result = ""
+    vowels = "aeiou"
+    
+    for char in string:
+    
+        if char.lower() not in vowels:
+            
+            result += char
+
+    return result
