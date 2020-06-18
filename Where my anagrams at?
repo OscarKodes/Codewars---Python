@@ -1,0 +1,16 @@
+def anagrams(word, words):
+    
+    result = []
+    wordList = list(word)
+    wordList.sort()
+    
+    for element in words:
+    
+        charList = list(element)
+        charList.sort()
+        
+        if charList == wordList:
+        
+            result.append(element)
+            
+    return result
