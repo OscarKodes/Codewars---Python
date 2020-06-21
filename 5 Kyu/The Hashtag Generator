@@ -1,0 +1,16 @@
+def generate_hashtag(s):
+    
+    wordList = s.strip().split(" ")
+    
+    while "" in wordList:
+        wordList.remove("")
+    
+    if len(wordList) > 0 and len("".join(wordList)) < 140:
+        
+        for i, word in enumerate(wordList):
+        
+            wordList[i] = word.capitalize()
+            
+        return "#" + "".join(wordList)
+        
+    return False
