@@ -1,0 +1,12 @@
+def move_zeros(array):
+    els = []
+    zs = []
+    
+    for el in array:
+        
+        if el is not False and el == 0:
+            zs.append(0)
+        else:
+            els.append(el)
+    
+    return els + zs
