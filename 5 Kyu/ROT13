@@ -1,0 +1,24 @@
+ABC = "abcdefghijklmnopqrstuvwxyz"
+
+def rot13(message):
+    
+    result = ""
+    
+    for char in message:
+    
+        if not char.isalpha():
+            result += char
+            
+        else:
+            wasUpper = char.isupper()
+            idx = ABC.index(char.lower())
+            idx += 13
+            rIdx = idx if idx < 26 else idx - 26
+            rChar = ABC[rIdx];
+            
+            if wasUpper:
+                rChar = rChar.upper()
+                
+            result += rChar
+    
+    return result
