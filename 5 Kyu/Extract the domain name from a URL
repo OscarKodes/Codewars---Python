@@ -1,0 +1,7 @@
+def domain_name(url):
+    
+    for prefix in ["http://", "https://", "www."]:
+        
+        url = url.replace(prefix, "") if prefix in url else url
+        
+    return url.split(".")[0]
