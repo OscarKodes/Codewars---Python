@@ -1,0 +1,9 @@
+def divisors(integer):
+    
+    result = []
+    
+    for i in range(2, integer):
+        
+        result.append(i) if integer % i == 0 else None
+            
+    return result if len(result) > 0 else str(integer) + " is prime"
