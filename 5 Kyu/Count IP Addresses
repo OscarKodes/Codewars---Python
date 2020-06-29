@@ -1,0 +1,17 @@
+def ips_between(start, end):
+    
+    startList = start.split(".")
+    diffList = []
+    sum = 0
+    
+    for i, endNum in enumerate(end.split(".")):
+    
+        diffList.append(int(endNum) - int(startList[i]))
+        
+    diffList.reverse()
+        
+    for i, num in enumerate(diffList):
+
+        sum += num * 256 ** i
+        
+    return sum
