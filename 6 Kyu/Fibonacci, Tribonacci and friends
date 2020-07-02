@@ -1,22 +1,17 @@
-function Xbonacci(signature,n){
-
-  let result = signature.slice();
-  let sum;
-  
-  while (result.length < n) {
-  
-    if (sum === undefined) {
+def Xbonacci(sig,n):
     
-      sum = signature.reduce((sum, num) => sum += num, 0);
-    }
+    result = sig[:]
+    nextNum = sum(sig)
     
-    else {
-      sum -= result[result.length - signature.length -1];
-      sum += result[result.length - 1];
-    }
-    
-    result.push(sum);
-  }
-  
-  return result.slice(0, n);
-}
+    while len(result) < n:
+        
+        diff = len(result) - len(sig)
+        
+        if diff > 0:
+            
+            nextNum -= result[diff - 1]
+            nextNum += result[len(result) - 1]
+            
+        result.append(nextNum)
+        
+    return result[0:n]
