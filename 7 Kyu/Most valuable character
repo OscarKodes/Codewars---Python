@@ -1,0 +1,39 @@
+def solve(st):
+    
+    print(st)
+    
+    maxVal = -1
+    maxChar = ""
+    
+    for i in range(len(st)):
+        
+        char = st[i]
+        val = st.rindex(char) - i
+        
+        if val > maxVal:
+            
+            maxVal = val
+            maxChar = char
+            
+        elif val == maxVal:
+            
+            maxChar += char
+
+    if len(maxChar) > 1:
+        
+        minIdx = None
+        minChar = ""
+        
+        for char in maxChar:
+            
+            idx = ord(char) - 97
+            print(idx)
+            
+            if minIdx == None or idx < minIdx:
+                
+                minIdx = idx
+                minChar = char
+                
+        maxChar = minChar
+
+    return maxChar
