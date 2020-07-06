@@ -1,0 +1,15 @@
+def anagrams(word, words):
+    
+    chars = "".join(sorted(list(word)))
+    
+    result = []
+    
+    for string in words:
+        
+        strChars = "".join(sorted(list(string)))
+        
+        if chars == strChars:
+            
+            result.append(string)
+            
+    return result
