@@ -1,0 +1,11 @@
+import re
+
+def to_camel_case(text):
+    
+    result = []
+    
+    for i, word in enumerate(re.split("-|_",text)):
+        
+        result.append(word) if i == 0 else result.append(word.title())
+        
+    return "" if len(text) == 0 else "".join(result)
