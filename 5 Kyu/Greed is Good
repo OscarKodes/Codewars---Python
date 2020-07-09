@@ -1,0 +1,29 @@
+def score(dice):
+
+    rollDict = {}
+    unique = {1:100, 5:50}
+    sum = 0
+    
+    for roll in dice:
+        
+        rollDict.setdefault(roll, 0)
+        rollDict[roll] += 1
+        
+    for key in rollDict.keys():
+
+        count = rollDict[key]
+        
+        if str(key) in "15":
+            
+            if count >= 3:
+                
+                sum += unique[key] * 10
+                count -= 3
+                
+            sum += count * unique[key]
+            
+        elif count >= 3:
+            
+            sum += key * 100
+            
+    return sum
