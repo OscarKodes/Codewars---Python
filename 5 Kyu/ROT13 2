@@ -1,0 +1,20 @@
+ABC = "abcdefghijklmnopqrstuvwxyz"
+
+def charRot(char):
+    return ABC[(ABC.index(char) + 13) % 26];
+
+def rot13(message):
+    
+    result = ""
+    
+    for char in message:
+        
+        rotted = char
+        
+        if char.isalpha():
+            rotted = (charRot(char.lower()))
+            rotted = rotted.upper() if char == char.upper() else rotted
+        
+        result += rotted
+        
+    return result
