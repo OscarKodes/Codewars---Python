@@ -1,0 +1,1 @@
+hero = lambda bullets, dragons: bullets / 2 >= dragons
