@@ -1,0 +1,15 @@
+def multiplication_table(row,col):
+    
+    result = []
+    firstRow = []
+    
+    for i in range(1, col + 1):
+        
+        firstRow.append(i)
+        
+    for i in range(1, row + 1):
+
+        nextRow = list(map(lambda num, row: num * row, firstRow, [i] * col))
+        result.append(nextRow)
+        
+    return result
