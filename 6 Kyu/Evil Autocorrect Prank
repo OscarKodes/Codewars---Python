@@ -1,0 +1,12 @@
+import re
+
+def autocorrect(input):
+    
+    youRegex = re.compile(r"^(you+|u)(\!|\?)?$", re.I)
+    resultArr = []
+
+    for word in input.split(" "):
+        
+        resultArr.append(youRegex.sub(r"your sister\2", word))
+    
+    return " ".join(resultArr)
