@@ -1,0 +1,15 @@
+import math
+
+def movie(card, ticket, perc):
+    
+    totalCardSpent = card
+    prevTicketPrice = ticket
+    times = 0
+    
+    while times == 0 or math.ceil(totalCardSpent) >= ticket * times:
+        
+        prevTicketPrice *= perc
+        totalCardSpent += prevTicketPrice
+        times += 1
+        
+    return times
