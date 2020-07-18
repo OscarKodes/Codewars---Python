@@ -1,0 +1,14 @@
+def max_sequence(arr):
+    
+    allSums = []
+    
+    for start in range(len(arr)):
+        
+        sum = 0
+        
+        for i in range(start, len(arr)):
+            
+            sum += arr[i]
+            allSums.append(sum);
+            
+    return max(allSums) if len(allSums) > 0 and max(allSums) > 0 else 0
