@@ -1,0 +1,22 @@
+def highest_rank(arr):
+    
+    countDict = {}
+    
+    for num in arr:
+        
+        countDict.setdefault(num, 0)
+        countDict[num] += 1
+        
+    maxFreq = 0
+    freqNum = 0
+    
+    for num in countDict.keys():
+        
+        currFreq = countDict[num]
+        
+        if currFreq > maxFreq or (currFreq == maxFreq and num > freqNum):
+            
+            maxFreq = currFreq
+            freqNum = num
+            
+    return freqNum
