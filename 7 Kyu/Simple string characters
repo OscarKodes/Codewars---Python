@@ -1,0 +1,12 @@
+import re
+
+def solve(s):
+    
+    record = {
+        "upper": len(re.compile(r"[A-Z]").findall(s)),
+        "lower": len(re.compile(r"[a-z]").findall(s)),
+        "number": len(re.compile(r"\d").findall(s)),
+        "special": len(re.compile(r"[!@#$%^&*()<>,.\"\'\-_=\+\?]").findall(s))
+    }
+
+    return list(record.values())
