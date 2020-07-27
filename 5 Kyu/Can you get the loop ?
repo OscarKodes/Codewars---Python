@@ -1,0 +1,10 @@
+def loop_size(node):
+    
+    nodeDict = {}
+    
+    while node not in nodeDict:
+        
+        nodeDict[node] = len(nodeDict)
+        node = node.next
+        
+    return len(nodeDict) - nodeDict[node]
