@@ -1,0 +1,11 @@
+def presses(phrase):
+    
+    keypad = [" 0", "1", "ABC2", "DEF3", "GHI4", "JKL5", "MNO6", "PQRS7", "TUV8", "WXYZ9", "*", "#"]
+    
+    totalPresses = 0
+    
+    for char in phrase.upper():
+        
+        totalPresses += list(filter(lambda button: char in button, keypad))[0].index(char) + 1
+        
+    return totalPresses
