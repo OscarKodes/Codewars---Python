@@ -1,0 +1,16 @@
+def first_non_repeating_letter(str):
+    
+    for ch in str:
+        
+        if str.index(ch) == str.rindex(ch):
+            
+            lowCh = ch.lower()
+            lowStr = str.lower()
+            
+            if ch.isalpha() and lowStr.index(lowCh) != lowStr.rindex(lowCh):
+                
+                continue
+            
+            return ch
+        
+    return ""
