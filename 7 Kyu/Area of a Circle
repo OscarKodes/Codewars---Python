@@ -1,0 +1,2 @@
+import math
+circleArea = lambda r: False if (str(type(r))[8:11] == "str" or r <= 0) else round(math.pi * r ** 2, 2)
