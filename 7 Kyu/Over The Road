@@ -1,0 +1,4 @@
+def over_the_road(address, n):
+    ifEven = n * 2 - address + 1
+    ifOdd = n * 2 - (address - 1)
+    return ifEven if address % 2 == 0 else ifOdd
