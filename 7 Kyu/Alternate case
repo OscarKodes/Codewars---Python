@@ -1,0 +1,1 @@
+alternateCase = lambda s: "".join(list(map(lambda ch: ch.upper() if ch.lower() == ch else ch.lower(), s)))
