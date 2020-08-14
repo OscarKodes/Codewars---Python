@@ -1,0 +1,1 @@
+hello = lambda name="": "Hello, " + (name.title() + "!" if name else "World!")
