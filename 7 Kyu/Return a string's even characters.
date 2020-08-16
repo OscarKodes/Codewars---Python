@@ -1,0 +1,9 @@
+def even_chars(st): 
+    
+    evenList = []
+
+    for i, ch in enumerate(st):
+        
+        evenList.append(ch) if i % 2 == 1 else None
+        
+    return "invalid string" if len(st) < 2 or len(st) > 100 else evenList
