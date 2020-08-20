@@ -1,0 +1,22 @@
+def solve(arr):
+    
+    arr.sort();
+    maxFreq, maxNum, result = 0, None, []
+    
+    while (len(arr) > 0):
+        
+        for num in arr:
+            
+            freq = arr.count(num)
+            
+            if (freq > maxFreq):
+                maxFreq, maxNum = freq, num
+            
+        result += [maxNum] * maxFreq
+        
+        while maxNum in arr:
+            arr.remove(maxNum)
+            
+        maxFreq, maxNum = 0, None
+
+    return result
