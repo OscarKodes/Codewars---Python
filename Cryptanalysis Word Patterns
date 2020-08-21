@@ -1,0 +1,20 @@
+def word_pattern(word):
+    
+    wordArr = list(word.lower())
+    chOrder = getChOrder(wordArr)
+    convertedWord = list(map(lambda ch: chOrder.index(ch),wordArr))
+    stringList = list(map(lambda num: str(num), convertedWord))
+    
+    return ".".join(stringList)
+
+def getChOrder(wordArr):
+    
+    result = []
+    
+    for i, ch in enumerate(wordArr):
+        
+        if ch not in wordArr[:i]:
+            
+            result.append(ch)
+            
+    return result
