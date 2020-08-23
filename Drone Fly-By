@@ -1,0 +1,11 @@
+def fly_by(lamps, drone):
+    
+    result = list(lamps)
+    
+    for i, lamp in enumerate(lamps):
+        
+        if len(drone) > i:
+            
+            result[i] = "o"
+        
+    return "".join(result)
