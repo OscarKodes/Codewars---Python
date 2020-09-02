@@ -1,0 +1,21 @@
+def solve(eq):
+    
+    result = ""
+    num = ""
+    
+    for i in range(len(eq) - 1, -1, -1):
+        
+        ch = eq[i]
+        
+        if ch.isnumeric():
+            
+            num = ch + num
+            
+            if i == 0 or eq[i-1] in "*+-/":
+                
+                result += num
+                num = ""
+        else:
+            result += ch
+            
+    return result
