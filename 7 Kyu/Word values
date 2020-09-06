@@ -1,0 +1,5 @@
+ABC = " abcdefghijklmnopqrstuvwxyz"
+
+name_value = lambda my_list: [get_score(word) * (i + 1) for i, word in enumerate(my_list)]
+        
+get_score = lambda string: sum([ABC.index(ch) for ch in string])
