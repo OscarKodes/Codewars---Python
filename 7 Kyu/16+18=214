@@ -1,0 +1,15 @@
+def add(num1, num2):
+    
+    str1 = str(num1)[::-1]
+    str2 = str(num2)[::-1]
+    length = len(str1) if num1 > num2 else len(str2)
+    result = ""
+    
+    for i in range(length):
+        
+        el1 = 0 if len(str1) - 1 < i else str1[i]
+        el2 = 0 if len(str2) - 1 < i else str2[i]
+        
+        result = str(int(el1) + int(el2)) + result
+        
+    return int(result)
