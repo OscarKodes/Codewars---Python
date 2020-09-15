@@ -1,0 +1,1 @@
+index = lambda array, n: -1 if len(array) <= n else array[n] ** n
