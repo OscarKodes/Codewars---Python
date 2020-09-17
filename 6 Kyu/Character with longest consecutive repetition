@@ -1,0 +1,17 @@
+def longest_repetition(chars):
+    
+    result = ("", 0)
+    char = ""
+    reps = 0
+    
+    for ch in chars:
+        
+        if ch != char:
+            
+            char = ch
+            reps = 0
+            
+        reps += 1
+        result = (char, reps) if reps > result[1] else result
+        
+    return result
