@@ -1,0 +1,1 @@
+dup = lambda arr: ["".join(["" if i != 0 and word[i-1] == word[i] else word[i] for i in range(len(word))]) for word in arr]
