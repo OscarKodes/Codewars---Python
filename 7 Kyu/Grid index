@@ -1,0 +1,5 @@
+def grid_index(grid, indexes):
+    
+    fusedGrid = "".join(["".join(el) for el in grid])
+    
+    return "".join([fusedGrid[num - 1] for num in indexes])
