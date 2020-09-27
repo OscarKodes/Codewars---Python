@@ -1,0 +1,12 @@
+def solve(arr):
+    
+    arrCopy = sorted(arr[:], reverse = True)
+    result = []
+    maxOn = True
+    
+    while len(arrCopy) > 0:
+        
+        result.append(arrCopy.pop(0)) if maxOn else result.append(arrCopy.pop(len(arrCopy) - 1))
+        maxOn = not maxOn
+        
+    return result
