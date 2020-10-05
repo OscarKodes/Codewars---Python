@@ -1,0 +1,8 @@
+def mirror(data: list) -> list:
+
+    left = data[:]
+    left.sort()
+    
+    right = left[len(left) - 2::-1]
+    
+    return left + right if len(data) > 1 else data
