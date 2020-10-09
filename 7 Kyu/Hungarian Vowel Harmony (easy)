@@ -1,0 +1,13 @@
+def dative(word):
+    
+    for i in range(len(word) - 1, -1,-1):
+        
+        ch = word[i]
+        
+        if ch in "eéiíöőüű":
+            
+            return word + "nek"
+        
+        elif ch in "aáoóuú":
+            
+            return word + "nak"
