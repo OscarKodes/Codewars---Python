@@ -1,0 +1,1 @@
+repeats = lambda arr: sum([(num if arr.index(num) == len(arr) - 1 - arr[-1::-1].index(num) else 0) for num in arr])
