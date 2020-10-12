@@ -1,0 +1,1 @@
+flip = lambda d, a: sorted(a) if d == "R" else sorted(a, reverse=True)
