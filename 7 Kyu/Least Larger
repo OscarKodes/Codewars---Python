@@ -1,0 +1,14 @@
+def least_larger(a, i): 
+    
+    testNum = a[i]
+    smallIdx = -1
+    
+    for i in range(len(a)):
+        
+        num = a[i]
+        
+        if num > testNum and (smallIdx == -1 or num < a[smallIdx]):
+                
+            smallIdx = i
+                
+    return smallIdx
