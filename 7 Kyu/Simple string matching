@@ -1,0 +1,19 @@
+def solve(a,b):
+    
+    if "*" not in a or len(a) > len(b) + 1:
+        
+        return a == b
+        
+    ast = a.index("*")
+    
+    if a[0:ast] == b[0:ast]:
+        
+        listA = list(a)
+        listB = list(b)
+        listA.reverse()
+        listB.reverse()
+        tail = "".join(listA[0:len(a) - 1 - ast])
+        
+        return tail == "".join(listB[:len(tail)])
+    
+    return False
