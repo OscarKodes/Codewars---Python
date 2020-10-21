@@ -1,0 +1,12 @@
+def string_task(s):
+    
+    vowels = list("aeiouy")
+    result = list(s.lower())
+    
+    for ch in vowels:
+        
+        while ch in result:
+        
+            result.remove(ch)   
+        
+    return "" if len(result) == 0 else "." + ".".join(result)
