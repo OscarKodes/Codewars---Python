@@ -1,0 +1,18 @@
+def uglify_word(s):
+    
+    flag = False
+    result = ""
+    
+    for ch in s:
+        
+        if ch.isalpha():
+            
+            result += ch.upper() if not flag else ch.lower()
+            flag = not flag
+            
+        else:
+            
+            result += ch
+            flag = False
+            
+    return result
