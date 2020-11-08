@@ -1,0 +1,1 @@
+filter_homogenous = lambda arr: [a for a in arr if len(a) > 0 and len(a) == len([e for e in a if type(e) == type(a[0])])]
