@@ -1,0 +1,10 @@
+def dashatize(num):
+    
+    if num == None: 
+        return "None"
+    
+    a = list("-".join(list(str(abs(num)))))
+
+    result = [a[i] for i in range(len(a)) if a[i] != "-" or int(a[i-1]) % 2 == 1 or int(a[i+1]) % 2 == 1]
+    
+    return "".join(result)
