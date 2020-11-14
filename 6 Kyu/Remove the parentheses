@@ -1,0 +1,20 @@
+def remove_parentheses(s):
+    
+    p = 0
+    result = ""
+    
+    for ch in s:
+        
+        if ch == "(":
+            
+            p += 1
+            
+        elif ch == ")":
+            
+            p -= 1
+            
+        elif p == 0:
+            
+            result += ch
+            
+    return result
