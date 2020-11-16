@@ -1,0 +1,9 @@
+def fight_resolve(d, a): 
+    
+    dWins = {"K":"A","S":"P","A":"S","P":"K"}
+    
+    if d.isupper() == a.isupper():
+        
+        return -1
+        
+    return d if dWins[d.upper()] == a.upper() else a
