@@ -1,0 +1,23 @@
+def solve(arr):
+    
+    roads = [str[str.index(" on ") + 4:] for str in arr]
+    dir = [str[0] for str in arr]
+    
+    roads.reverse()
+    dir.reverse()
+    dir.pop()
+    
+    result = []
+    
+    for i in range(len(roads)):
+        
+        if i-1 == -1:
+            result.append("Begin on " + roads[i])
+            
+        elif dir[i-1] == "L":
+            result.append("Right on " + roads[i])
+            
+        else:
+            result.append("Left on " + roads[i])
+            
+    return result
