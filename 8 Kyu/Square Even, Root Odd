@@ -1,0 +1,2 @@
+import math
+quarter_of = lambda month: math.ceil(month / 3)
