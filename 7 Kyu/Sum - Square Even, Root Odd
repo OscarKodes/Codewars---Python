@@ -1,0 +1,2 @@
+import math
+sum_square_even_root_odd = lambda nums: round(sum([n ** 2 if n % 2 == 0 else math.sqrt(n) for n in nums]),2)
