@@ -1,0 +1,11 @@
+def red_knight(N, P):
+    
+    K = 0
+    
+    while P != K:
+        
+        P += 1
+        K += 2
+        N = 0 if N == 1 else 1
+        
+    return ("White" if N == 0 else "Black", K)
