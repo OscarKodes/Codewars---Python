@@ -1,0 +1,1 @@
+valid_spacing = lambda s: "" not in s.split(" ") or len(s) < 1
