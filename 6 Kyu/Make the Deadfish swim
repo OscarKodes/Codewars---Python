@@ -1,0 +1,17 @@
+def parse(data):
+    
+    num = 0
+    result = []
+    
+    for ch in data:
+        
+        if (ch == "i"):
+            num += 1
+        elif (ch == "d"):
+            num -= 1
+        elif (ch == "s"):
+            num *= num
+        elif (ch == "o"):
+            result.append(num)
+    
+    return result
