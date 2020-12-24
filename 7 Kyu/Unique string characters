@@ -1,0 +1,1 @@
+solve = lambda a,b: "".join([c for c in a + b if (c not in a or c not in b)])
