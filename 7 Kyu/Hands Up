@@ -1,0 +1,2 @@
+import math
+get_positions = lambda n: (n % 3, math.floor(n / 3) % 3, math.floor(n / 9) % 3)
