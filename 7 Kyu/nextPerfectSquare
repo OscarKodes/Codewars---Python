@@ -1,0 +1,14 @@
+import math
+def next_perfect_square(n):
+    
+    next = 0
+    
+    if (n >= 0):
+        rt = math.sqrt(n)
+    
+        if (rt % 1 == 0):
+            next = rt + 1
+        else:
+            next = math.ceil(rt)
+        
+    return next ** 2
