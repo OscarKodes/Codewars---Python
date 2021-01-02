@@ -1,0 +1,23 @@
+def street_fighter_selection(fighters, initial_position, moves):
+    
+    row = 0
+    col = 0
+    result = []
+    
+    for move in moves:
+        
+        if move == "up" and row == 1:
+            row -= 1
+            
+        elif move == "down" and row == 0:
+            row += 1
+            
+        elif move == "right":
+            col = col + 1 if col != 5 else 0
+            
+        elif move == "left":
+            col = col - 1 if col != 0 else 5
+            
+        result.append(fighters[row][col])
+        
+    return result
