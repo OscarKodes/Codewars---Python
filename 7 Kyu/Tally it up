@@ -1,0 +1,1 @@
+score_to_tally = lambda score: "e <br>" * (score // 5) + ["", "a", "b", "c", "d"][score % 5]
