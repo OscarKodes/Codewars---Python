@@ -1,0 +1,21 @@
+def dictMake(list):
+    
+    dict = {}
+    
+    for num in list:
+        
+        dict[num] = dict.get(num, 0) + 1
+        
+    return dict
+
+def common(a,b,c):
+    
+    dictA, dictB, dictC, sum = dictMake(a), dictMake(b), dictMake(c), 0
+    
+    for num in list(dictA.keys()):
+        
+        if num in dictB and num in dictC:
+            
+            sum += num * min(dictA[num], dictB[num], dictC[num])
+
+    return sum
