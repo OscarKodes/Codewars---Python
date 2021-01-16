@@ -1,0 +1,1 @@
+multiples = lambda m,n: [i * n for i in range(1, m + 1)]
