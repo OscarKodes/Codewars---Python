@@ -1,0 +1,16 @@
+def loose_change(cents):
+    
+    names = ["Quarters", "Dimes", "Nickels", "Pennies"]
+    values = [25, 10, 5, 1]
+    result = {}
+    cents = cents if cents > 0 else 0
+    
+    for i in range(len(values)):
+        
+        val = values[i]
+        name = names[i]
+        
+        result[name] = cents // val
+        cents -= result[name] * val
+        
+    return result
