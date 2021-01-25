@@ -1,0 +1,14 @@
+def get_consective_items(items, key): 
+    
+    items, key = str(items), str(key)
+    count, max = 0, 0
+    
+    for ch in items:
+        
+        if ch == key:
+            count += 1
+            max = count if count > max else max 
+        else:
+            count = 0
+            
+    return max
