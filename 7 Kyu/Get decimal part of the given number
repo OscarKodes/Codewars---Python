@@ -1,0 +1,1 @@
+get_decimal = lambda n: abs(n) % 1
