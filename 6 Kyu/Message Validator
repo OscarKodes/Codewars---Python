@@ -1,0 +1,19 @@
+def is_a_valid_message(message):
+
+    count = 0
+    
+    for ch in message:
+        
+        if count == 0:
+            
+            if ch.isalpha():
+                
+                return False
+            
+            count = int(ch)
+
+        else:
+            
+            count = (count * 10) + int(ch) if ch.isnumeric() else count - 1
+            
+    return count == 0
