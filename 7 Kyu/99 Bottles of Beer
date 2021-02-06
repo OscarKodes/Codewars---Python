@@ -1,0 +1,20 @@
+def sing(): 
+
+    song = []
+    
+    for i in range(99,-1,-1):
+        
+        unit = "bottles" if i != 1 else "bottle"
+        beerStr = "%s %s of beer" %(i if i > 0 else "no more", unit)
+        
+        if i != 99:
+            str2 = "Take one down and pass it around, %s on the wall." %(beerStr)
+            song.append(str2)
+        
+        str1 = "%s on the wall, %s." %(beerStr, beerStr)
+        
+        song.append(str1 if i > 0 else str1[0].upper() + str1[1:])
+    
+    song.append("Go to the store and buy some more, 99 bottles of beer on the wall.")
+    
+    return song
