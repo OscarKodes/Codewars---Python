@@ -1,0 +1,3 @@
+a = "abcdefghijklmnopqrstuvwxyz"
+
+move_ten = lambda st: "".join([a[(a.index(c) + 10) % 26 if a.index(c) + 10 >= 26 else a.index(c) + 10] for c in st])
