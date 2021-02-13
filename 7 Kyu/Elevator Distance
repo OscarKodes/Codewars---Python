@@ -1,0 +1,1 @@
+elevator_distance = lambda a: sum([abs(a[i] - a[i-1]) for i in range(len(a)) if i > 0])
