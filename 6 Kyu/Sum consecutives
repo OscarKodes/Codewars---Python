@@ -1,0 +1,21 @@
+def sum_consecutives(s):
+    
+    result = []
+    freq = 1
+    prevNum = s[0]
+    
+    for i in range(1, len(s)):
+        
+        n = s[i]
+        
+        if n != prevNum:
+            
+            result.append(freq * prevNum)
+            freq = 1
+            prevNum = n
+            
+        else:
+            
+            freq += 1
+
+    return result + [freq * prevNum]
