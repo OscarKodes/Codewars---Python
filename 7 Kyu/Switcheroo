@@ -1,0 +1,1 @@
+switcheroo = lambda s: "".join([("a" if ch == "b" else ("b" if ch == "a" else "c")) for ch in s])
