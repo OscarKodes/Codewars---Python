@@ -1,0 +1,7 @@
+def spoonerize(words):
+
+    l = words.split(" ")
+    l2 = l[:]
+    l2.reverse()
+
+    return " ".join([l2[i][0] + e[1:] for i, e in enumerate(l)])
