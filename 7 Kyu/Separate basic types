@@ -1,0 +1,11 @@
+def separate_types(seq):
+    
+    dict = {}
+
+    for e in seq:
+
+        key = type(e)
+        
+        dict[key] = [e] if key not in dict else dict[key] + [e]
+            
+    return dict
