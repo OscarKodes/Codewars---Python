@@ -1,0 +1,5 @@
+def get_missing_element(seq): 
+    
+    missingIdxs = [i for i, n in enumerate(sorted(seq)) if i != n]
+
+    return 9 if len(missingIdxs) == 0 else missingIdxs[0]
