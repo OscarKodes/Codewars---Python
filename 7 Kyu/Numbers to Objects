@@ -1,0 +1,1 @@
+num_obj = lambda s: [{str(n):chr(n)} for n in s]
