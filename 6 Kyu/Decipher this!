@@ -1,0 +1,21 @@
+getNum = lambda s: "".join([c for c in s if c.isnumeric()])
+getTail = lambda s: s[len(s) - 1] + s[1:len(s) - 1] + s[0]
+
+def decipher_this(s):
+    
+    words = s.split(" ")
+    result = []
+    
+    for word in words:
+        
+        num = getNum(word)
+        ch = chr(int(num))
+        tail = word[len(num):]
+        
+        if len(word) - len(num) >= 2:
+
+            tail = getTail(tail)
+            
+        result.append(ch + tail)
+        
+    return " ".join(result)
