@@ -1,0 +1,2 @@
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+goose_filter = lambda birds: [e for e in birds if e not in geese]
