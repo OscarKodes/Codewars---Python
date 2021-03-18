@@ -1,0 +1,6 @@
+def max_number(n):
+    
+    numArr = [int(s) for s in list(str(n))]
+    numArr.sort(reverse=True)
+
+    return int("".join([str(n) for n in numArr]))
