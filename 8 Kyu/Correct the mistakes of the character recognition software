@@ -1,0 +1,1 @@
+correct = lambda s: "".join([c if c not in "015" else {"0":"O","1":"I","5":"S"}[c] for c in s])
