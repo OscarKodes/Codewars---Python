@@ -1,0 +1,21 @@
+def solve(s):
+    
+    max = 0
+    val = 0
+    str = ""
+    
+    for c in s:
+        
+        if c not in "aeiou":
+            
+            str += c
+            val += "abcdefghijklmnopqrstuvwxyz".index(c) + 1
+            
+            max = val if val > max else max
+            
+        else:
+            
+            str = ""
+            val = 0
+            
+    return max
