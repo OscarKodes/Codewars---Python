@@ -1,0 +1,9 @@
+def nth_fib(n):
+    
+    fibo = [0, 1]
+    
+    for i in range(n):
+        if i > 1:
+            fibo.append(fibo[i - 1] + fibo[i - 2])
+
+    return fibo[n - 1]
