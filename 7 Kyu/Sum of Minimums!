@@ -1,0 +1,1 @@
+sum_of_minimums = lambda nums: sum([min(ls) for ls in nums])
