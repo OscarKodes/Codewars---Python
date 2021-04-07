@@ -1,0 +1,7 @@
+def calculate(num1, op, num2): 
+
+    if op not in "+-*/" or (op == "/" and num2 == 0):
+        return None
+        
+    else:
+        return eval("%s %s %s" % (num1, op, num2))
