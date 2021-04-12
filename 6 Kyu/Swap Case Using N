@@ -1,0 +1,16 @@
+def swap(s,n):
+    
+    bin = "{0:b}".format(n)
+    idx = 0
+    result = ""
+    
+    for c in s:
+        
+        if not c.isalpha():
+            result += c
+            
+        else:
+            result += c if bin[idx] == "0" else c.swapcase()
+            idx = (idx + 1) % len(bin)
+    
+    return result
