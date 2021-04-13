@@ -1,0 +1,1 @@
+filter_long_words = lambda s, n: [w for w in s.split(" ") if len(w) > n]
