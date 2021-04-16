@@ -1,0 +1,8 @@
+def twice_as_old(dad_years_old, son_years_old):
+    
+    twice = son_years_old * 2
+    
+    if dad_years_old > twice:
+        return dad_years_old - twice
+    else:
+        return twice - dad_years_old
