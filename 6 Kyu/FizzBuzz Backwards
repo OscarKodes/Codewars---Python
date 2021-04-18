@@ -1,0 +1,7 @@
+def reverse_fizz_buzz(array):
+    
+    fizzBuzz = None if "FizzBuzz" not in array else array.index("FizzBuzz")
+    fizz = fizzBuzz if "Fizz" not in array else array.index("Fizz")
+    buzz = fizzBuzz if "Buzz" not in array else array.index("Buzz")
+    
+    return (fizz + 1, buzz + 1)
