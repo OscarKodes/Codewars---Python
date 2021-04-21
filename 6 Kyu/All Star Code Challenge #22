@@ -1,0 +1,7 @@
+import math
+def to_time(s):
+    
+    hr = math.floor(s / 3600)
+    min = math.floor((s % 3600) / 60)
+    
+    return "%s hour(s) and %s minute(s)" %(hr, min)
