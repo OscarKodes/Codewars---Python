@@ -1,0 +1,5 @@
+def even_last(nums): 
+    
+    evens = [n for i, n in enumerate(nums) if i % 2 == 0]
+    
+    return 0 if len(nums) == 0 else sum(evens) * nums[-1]
