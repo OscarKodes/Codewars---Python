@@ -1,0 +1,1 @@
+average = lambda array: round(sum(array) / len(array))
