@@ -1,0 +1,22 @@
+def sortme(ls):
+     
+    dc = {}
+    multi = {}
+    ordered = sorted([word.lower() for word in ls])
+    result = []
+    
+    for s in ls:
+        low = s.lower()
+        if low in dc:
+            dc[low] = dc[low] + [s] if isinstance(dc[low], list) else [dc[low]] + [s]
+        else:
+            dc[low] = s
+
+    for s in ordered:
+        if isinstance(dc[s], list):
+            multi[s] = 0 if multi[s] == None else multi[s] + 1
+            result.append(dc[s][multi[s]])
+        else:
+            result.append(dc[s])
+            
+    return result
