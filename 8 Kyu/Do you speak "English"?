@@ -1,0 +1,1 @@
+sp_eng = lambda s: True in [True for i in range(len(s)) if s[i:i+7].lower() == "english"]
