@@ -1,0 +1,1 @@
+first = lambda seq, n = 1: seq[0:n]
