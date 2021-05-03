@@ -1,0 +1,7 @@
+def mineLocation(field):
+    row, col = 0, 0
+    for i, a in enumerate(field):
+        if 1 in a:
+            row = i
+            col = a.index(1)
+            return [row, col]
