@@ -1,0 +1,7 @@
+def chess_board_cell_color(cell1, cell2):
+    
+    blkCols = "ACEG"
+    colsMatch = (cell1[0] in blkCols) == (cell2[0] in blkCols)
+    rowsMatch = int(cell1[1]) % 2 == int(cell2[1]) % 2
+    
+    return colsMatch == rowsMatch
