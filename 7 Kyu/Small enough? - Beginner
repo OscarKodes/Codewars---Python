@@ -1,0 +1,1 @@
+small_enough = lambda array, limit: max(array) <= limit
