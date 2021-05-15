@@ -1,0 +1,11 @@
+def digital_root(n):
+    
+    result = 0
+    numArr = [int(s) for s in list(str(n))]
+    
+    if len(numArr) == 1:
+        return n
+    else:
+        result = digital_root(sum(numArr))
+    
+    return result
