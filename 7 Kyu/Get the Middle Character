@@ -1,0 +1,4 @@
+import math
+def get_middle(s):
+    mid = math.floor(len(s) / 2)
+    return s[mid] if len(s) % 2 == 1 else s[mid-1] + s[mid]
