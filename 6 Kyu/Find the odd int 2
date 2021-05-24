@@ -1,0 +1,15 @@
+def find_it(seq):
+    
+    nums = sorted(seq)
+    i = 0
+    
+    while i < len(nums):
+        
+        n = nums[i]
+        first = nums.index(n)
+        last = len(nums) - nums[::-1].index(n) - 1
+        
+        if (last - first) % 2 == 0:
+            return n
+        
+        i = last + 1
