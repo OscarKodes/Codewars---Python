@@ -1,0 +1,4 @@
+def high_and_low(s):
+    nums = [int(e) for e in s.split(" ")]
+    nums.sort()
+    return "%s %s" %(nums[-1], nums[0])
