@@ -1,0 +1,1 @@
+move_zeros = lambda a: [n for n in a if n != 0] + [n for n in a if n == 0]
