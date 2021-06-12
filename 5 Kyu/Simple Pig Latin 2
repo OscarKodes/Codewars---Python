@@ -1,0 +1,1 @@
+pig_it = lambda s: " ".join([(e[1:] + e[0] + "ay" if e not in "!.?" else e) for e in s.split(" ")])
