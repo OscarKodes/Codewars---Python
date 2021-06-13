@@ -1,0 +1,2 @@
+import math
+is_square = lambda n: n >= 0 and math.sqrt(n).is_integer()
