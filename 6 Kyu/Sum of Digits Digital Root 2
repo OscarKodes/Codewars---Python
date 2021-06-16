@@ -1,0 +1,1 @@
+digital_root = lambda n: n if n <= 9 else digital_root(sum([int(s) for s in list(str(n))]))
