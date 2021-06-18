@@ -1,0 +1,1 @@
+count_bits = lambda n: len([e for e in list(bin(n)[2:]) if int(e) == 1])
