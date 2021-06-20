@@ -1,0 +1,1 @@
+array_diff = lambda a, b: [e for e in a if e not in b];
