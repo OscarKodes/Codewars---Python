@@ -1,0 +1,3 @@
+def find_outlier(ints):
+    findEven = len([n for n in range(3) if ints[n] % 2 == 1]) > 1
+    return [n for n in ints if n % 2 == (0 if findEven else 1)][0]
