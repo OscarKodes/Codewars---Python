@@ -1,0 +1,5 @@
+def high_and_low(nums):
+    
+    arr = [int(n) for n in nums.split(" ")]
+    
+    return "%s %s" %(max(arr), min(arr))
