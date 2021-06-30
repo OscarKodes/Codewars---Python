@@ -1,0 +1,12 @@
+def duplicate_count(text):
+    
+    ls = sorted(list(text.lower()))
+    count = 0
+    
+    for i, c in enumerate(ls):
+        last = len(ls) - ls[::-1].index(c) - 1
+        
+        if i + 1 == last:
+            count += 1
+            
+    return count
