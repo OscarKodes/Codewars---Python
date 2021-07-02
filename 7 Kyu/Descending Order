@@ -1,0 +1,1 @@
+descending_order = lambda n: int("".join(sorted(str(n), reverse=True)))
