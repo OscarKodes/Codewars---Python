@@ -1,0 +1,2 @@
+from numpy import prod
+persistence = lambda n: 0 if n < 10 else 1 + persistence(prod([int(s) for s in list(str(n))]))
