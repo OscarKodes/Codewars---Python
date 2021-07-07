@@ -1,0 +1,1 @@
+accum = lambda s: "-".join([c.upper() + (c * i) for i, c in enumerate(s.lower())])
