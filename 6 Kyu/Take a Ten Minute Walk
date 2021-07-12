@@ -1,0 +1,1 @@
+is_valid_walk = lambda w: w.count("n") == w.count("s") and w.count("w") == w.count("e") and len(w) == 10
