@@ -1,0 +1,1 @@
+alphabet_position = lambda t: " ".join([str(ord(c) - 96) for c in t.lower() if c.isalpha()])
