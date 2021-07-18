@@ -1,0 +1,1 @@
+unique_in_order = lambda iterable: [e for i,e in enumerate(iterable) if i == 0 or iterable[i-1] != e]
