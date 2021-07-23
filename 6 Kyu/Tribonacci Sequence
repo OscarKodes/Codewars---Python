@@ -1,0 +1,1 @@
+tribonacci = lambda a, n: a[0:n] if len(a) >= n else tribonacci(a + [sum(a[len(a)-3:])], n)
