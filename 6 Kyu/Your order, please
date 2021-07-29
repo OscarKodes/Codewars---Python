@@ -1,0 +1,12 @@
+def order(s):
+    
+    ls = s.split(" ")
+    result = [""] * len(ls)
+    
+    if s == "": 
+        return ""
+    
+    for i in range(len(ls)):
+        result[[int(n) for n in ls[i] if n.isnumeric()][0]-1] = ls[i]
+    
+    return " ".join(result)
