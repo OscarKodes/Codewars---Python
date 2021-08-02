@@ -1,0 +1,8 @@
+def iq_test(nums):
+    
+    arr = [int(c) for c in nums.split(" ")]
+    
+    odds = [n for n in arr if n % 2 == 1]
+    evens = [n for n in arr if n % 2 == 0]
+    
+    return arr.index(odds[0]) + 1 if len(odds) < len(evens) else arr.index(evens[0]) + 1
