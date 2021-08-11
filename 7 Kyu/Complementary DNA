@@ -1,0 +1,1 @@
+DNA_strand = lambda dna: "".join(["ATAGCG"["ATAGCG".index(c) + 1] for c in dna])
