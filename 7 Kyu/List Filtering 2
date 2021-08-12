@@ -1,1 +1,1 @@
-const filter_list = l => l.filter(e => typeof(e) === "number");
+filter_list = lambda l: [e for e in l if "int" in str(type(e))]
