@@ -1,0 +1,15 @@
+def valid_parentheses(s):
+    
+    score = 0
+    
+    for c in s:
+        
+        if c in ")(":
+            
+            score += ") (".index(c) - 1
+            
+        if score < 0:
+            
+            return False
+        
+    return score is 0
