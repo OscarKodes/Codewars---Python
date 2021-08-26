@@ -1,0 +1,18 @@
+def rot13(text):
+    
+    abc = "abcdefghijklmnopqrstuvwxyz"
+    result = ""
+    
+    for c in text:
+        
+        if not c.isalpha():
+            
+            result += c
+        
+        else:
+
+            idx = abc.index(c.lower()) + 13
+            idx = idx - 26 if idx > 25 else idx
+            result += abc[idx] if c.lower() == c else abc[idx].upper()
+
+    return result
