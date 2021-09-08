@@ -1,0 +1,2 @@
+import math
+cakes = lambda r, a: min([0 if k not in a else math.floor(a[k] / r[k]) for k in r.keys()])
