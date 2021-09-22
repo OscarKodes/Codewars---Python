@@ -1,0 +1,16 @@
+def oracle(gestures):
+    
+    score = {"rock":0,"paper":0,"scissors":0};
+    winLose = {
+        "rock":["paper", "scissors"], 
+        "paper":["scissors", "rock"], 
+        "scissors":["rock", "paper"]
+    }
+    
+    for sign in gestures:
+            score[winLose[sign][0]] += 1
+            score[winLose[sign][1]] -= 1
+    
+    winners = [sign for sign in list(score.keys()) if score[sign] > 0]
+    
+    return "tie" if len(winners) == 0 else "/".join(winners)
