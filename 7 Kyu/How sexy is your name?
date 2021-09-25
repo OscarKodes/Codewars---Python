@@ -1,0 +1,10 @@
+def sexy_name(name):
+    
+    pts = sum(SCORES[c] for c in name.upper() if c in SCORES)
+    
+    rank = {599: "THE ULTIMATE SEXIEST",
+             300: "VERY SEXY",
+             60: "PRETTY SEXY",
+             -1: "NOT TOO SEXY"}
+
+    return [rank[n] for n in list(rank.keys()) if pts > n][0]
