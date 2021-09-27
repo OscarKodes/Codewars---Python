@@ -1,0 +1,7 @@
+def find_e(s):
+    
+    if s in ["", None]: return s
+
+    n = list(s.lower()).count("e")
+    
+    return str(n) if n > 0 else "There is no \"e\"."
