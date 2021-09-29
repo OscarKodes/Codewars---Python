@@ -1,0 +1,1 @@
+single_digit = lambda n: n if n < 10 else single_digit(sum(int(c) for c in bin(n)[2:]))
