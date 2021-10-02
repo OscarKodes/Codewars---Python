@@ -1,0 +1,13 @@
+def x(n):
+    
+    result = []
+    
+    for i in range(n):
+        
+        row = ["□"] * n
+        row[n - i - 1] = "■"
+        row[i] = "■"
+        
+        result.append("".join(row))
+
+    return "\n".join(result)
