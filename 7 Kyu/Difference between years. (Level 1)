@@ -1,0 +1,6 @@
+def how_many_years (d1,d2):
+    
+    n1 = int("".join(d1.split("/")))
+    n2 = int("".join(d2.split("/")))
+    
+    return round(abs(n1 - n2) / 10000)
