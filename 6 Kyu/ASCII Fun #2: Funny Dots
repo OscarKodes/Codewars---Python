@@ -1,0 +1,7 @@
+def dot(w,h):
+    
+    frame = "+" + "---+" * w
+    ohs = "|" + " o |" * w
+    newLine = "\n"
+
+    return (frame + newLine + ohs + newLine) * h + frame
