@@ -1,0 +1,14 @@
+import math
+def is_square(ls):
+    
+    verified = []
+    
+    for n in ls:
+        
+        root = math.sqrt(n)
+        
+        if root == math.floor(root):
+            
+            verified.append(n)
+    
+    return None if len(ls) == 0 else len(verified) == len(ls)
