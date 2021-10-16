@@ -1,0 +1,2 @@
+import math
+waterbombs = lambda f, w: sum(math.ceil(len(s) / w) for s in f.split("Y"))
