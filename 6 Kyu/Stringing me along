@@ -1,0 +1,1 @@
+create_message = lambda prev: lambda next = "": prev if next == "" else create_message(prev + " " + next)
