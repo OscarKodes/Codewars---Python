@@ -1,0 +1,1 @@
+bumps = lambda road: "Woohoo!" if road.count("n") <= 15 else "Car Dead"
