@@ -1,0 +1,1 @@
+spam = lambda n: "".join('hue' for i in range(n))
