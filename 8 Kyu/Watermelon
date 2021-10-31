@@ -1,0 +1,1 @@
+divide = lambda weight: weight > 2 and weight % 2 == 0
