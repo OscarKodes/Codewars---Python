@@ -1,0 +1,9 @@
+def mygcd(x, y):
+    
+    nums = sorted([x, y])
+    
+    while nums[0] % nums[1] != 0:
+        
+        nums = nums[1], nums[0] % nums[1]
+    
+    return nums[1]
