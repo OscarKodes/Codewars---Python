@@ -1,0 +1,5 @@
+def reverse_alternate(s):
+    
+    ls = [e for e in s.split(" ") if e != ""]
+
+    return " ".join([w if i % 2 == 0 else w[::-1] for i, w in enumerate(ls)])
