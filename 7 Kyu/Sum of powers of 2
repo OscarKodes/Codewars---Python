@@ -1,0 +1,19 @@
+def powers(n):
+    
+    maxPow = 0
+    nums = []
+    
+    while 2 ** maxPow < n:
+        
+        maxPow += 1
+        
+    for i in range(maxPow + 1, 0, -1):
+        
+        expo = 2 ** (i - 1)
+        total = sum(nums) + expo
+        
+        if total <= n:
+            
+            nums.append(expo)
+        
+    return sorted(nums)
