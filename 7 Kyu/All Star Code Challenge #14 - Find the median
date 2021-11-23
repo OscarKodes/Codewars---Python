@@ -1,0 +1,9 @@
+import math
+
+def median(a):
+    
+    a.sort()
+    
+    idx = math.floor(len(a) / 2)
+
+    return a[idx] if len(a) % 2 == 1 else (a[idx] + a[idx - 1]) / 2
