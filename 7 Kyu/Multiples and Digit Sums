@@ -1,0 +1,13 @@
+getDigitSum = lambda n: sum(int(nStr) for nStr in list(str(n)))
+
+def procedure(n):
+    
+    i = 1
+    result = 0
+    
+    while i * n <= 100:
+
+        result += getDigitSum(i * n)
+        i += 1
+        
+    return result
