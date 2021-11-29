@@ -1,0 +1,15 @@
+import math
+
+def solution(n):
+    
+    up = math.ceil(n)
+    down = math.floor(n)
+    mid = (up + down) / 2
+    
+    ls = [up, down, mid]
+    ls.sort(reverse=True)
+    
+    diffs = [abs(n - e) for e in ls]
+    idx = diffs.index(min(diffs))
+    
+    return ls[idx]
