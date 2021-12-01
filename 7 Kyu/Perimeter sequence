@@ -1,0 +1,1 @@
+perimeter_sequence = lambda a, n: a * n * 4
