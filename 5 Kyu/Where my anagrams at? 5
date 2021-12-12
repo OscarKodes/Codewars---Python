@@ -1,0 +1,5 @@
+def anagrams(word, words):
+    
+    letters = sorted(word)
+    
+    return [s for s in words if sorted(s) == letters]
