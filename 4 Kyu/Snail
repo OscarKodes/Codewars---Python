@@ -1,0 +1,26 @@
+def snail(snail_map):
+
+    direction = 0
+    result = []
+    
+    while len(snail_map) > 0:
+
+        if direction == 0:
+            
+            result += snail_map.pop(0)
+            
+        elif direction == 1:
+            
+            result += [ls.pop(-1) for ls in snail_map]
+            
+        elif direction == 2:
+            
+            result += snail_map.pop(-1)[::-1]
+            
+        elif direction == 3:
+            
+            result += [ls.pop(0) for ls in snail_map][::-1]
+            
+        direction = direction + 1 if direction < 3 else 0
+        
+    return result
