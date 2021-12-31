@@ -1,0 +1,15 @@
+def count_salutes(hallway):
+    
+    salutes = 0
+    
+    for i, c in enumerate(hallway):
+        
+        if c == "<":
+            
+            salutes += hallway[:i].count(">")
+            
+        elif c == ">":
+            
+            salutes += hallway[i:].count("<")
+            
+    return salutes
