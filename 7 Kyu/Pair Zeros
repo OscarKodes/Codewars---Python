@@ -1,0 +1,16 @@
+def pair_zeros(arr):
+    
+    keepZero = True
+    result = []
+    
+    for n in arr:
+        
+        if n != 0 or n == 0 and keepZero:
+            
+            result.append(n)
+            
+        if n == 0:
+            
+            keepZero = not keepZero
+
+    return result
