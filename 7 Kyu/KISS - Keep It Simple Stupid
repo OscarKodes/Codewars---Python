@@ -1,0 +1,5 @@
+def is_kiss(words):
+    
+    wordLs = words.split(" ")
+    
+    return "Good work Joe!" if len([w for w in wordLs if len(w) > len(wordLs)]) == 0 else "Keep It Simple Stupid"
