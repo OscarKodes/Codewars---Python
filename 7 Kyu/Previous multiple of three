@@ -1,0 +1,11 @@
+def prev_mult_of_three(n):
+    
+    if n % 3 == 0:
+        
+        return n
+    
+    elif n < 9:
+        
+        return None
+
+    return prev_mult_of_three(int(str(n)[:-1]))
