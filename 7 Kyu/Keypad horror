@@ -1,0 +1,1 @@
+computer_to_phone = lambda nums: "".join("0789456123"[int(n)] for n in nums)
