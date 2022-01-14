@@ -1,0 +1,15 @@
+def compare(s1,s2):
+    
+    s1 = replaceNones(s1)
+    s2 = replaceNones(s2)
+
+    score1 = getScore(s1.upper()) if isAllChar(s1) else 0 
+    score2 = getScore(s2.upper()) if isAllChar(s2) else 0
+    
+    return score1 == score2
+
+replaceNones = lambda s: "" if s == None else s
+    
+isAllChar = lambda s: len([c for c in s if not c.isalpha()]) == 0
+
+getScore = lambda s: sum([ord(c) for c in s])
