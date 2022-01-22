@@ -1,0 +1,24 @@
+def sum_of_integers_in_string(s):
+    
+    nums = []
+    recentNum = ""
+    prevIsNum = False
+    
+    for c in s:
+        
+        if c.isnumeric():
+            
+            recentNum += c
+            prevIsNum = True
+            
+        elif not c.isnumeric() and prevIsNum:
+            
+            nums.append(int(recentNum))
+            recentNum = ""
+            prevIsNum = False
+    
+    if prevIsNum:
+        
+        nums.append(int(recentNum))
+    
+    return sum(nums)
