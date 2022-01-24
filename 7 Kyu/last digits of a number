@@ -1,0 +1,7 @@
+def solution(n,d):
+    
+    numStr = str(n)
+    wordLength = len(numStr)
+    digits = 0 if d < 0 else (wordLength if d > wordLength else d)
+    
+    return [int(c) for c in numStr[wordLength - digits:]]
