@@ -1,0 +1,14 @@
+def comes_after(st, l): 
+    
+    result = ""
+    
+    for i in range(0, len(st) - 1):
+        
+        ch1 = st[i]
+        ch2 = st[i + 1]
+        
+        if ch1.lower() == l.lower() and ch2.isalpha():
+            
+            result += ch2
+            
+    return result
