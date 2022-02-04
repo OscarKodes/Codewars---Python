@@ -1,0 +1,3 @@
+toHex = lambda n: ("%02x" %(0 if n < 0 else (255 if n > 255 else n))).upper()
+
+rgb = lambda r, g, b: toHex(r) + toHex(g) + toHex(b)
