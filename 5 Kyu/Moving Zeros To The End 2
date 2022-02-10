@@ -1,0 +1,5 @@
+def move_zeros(a):
+    
+    noZero = [e for e in a if e != 0]
+
+    return noZero + ([0] * (len(a) - len(noZero)))
