@@ -1,0 +1,5 @@
+def narcissistic(n):
+    
+    nStr = str(n)
+    
+    return sum([int(digit) ** len(nStr) for digit in nStr]) == n
