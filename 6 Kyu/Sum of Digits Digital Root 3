@@ -1,0 +1,9 @@
+def digital_root(n):
+    
+    if n < 10:
+        
+        return n
+    
+    result = digital_root(sum([int(digit) for digit in str(n)]))
+    
+    return result
