@@ -1,0 +1,5 @@
+def calculator(txt):
+    
+    ls = txt.split(" ")
+    
+    return eval("%s %s %s" %(len(ls[0]), ls[1], len(ls[2]))) * "."
