@@ -1,0 +1,17 @@
+def assemble(arr):
+    
+    result = [] if arr == [] else len(arr[0]) * ["#"]
+    
+    for i, c in enumerate(result):
+        
+        if c == "#":
+            
+            for s in arr: 
+                
+                if s[i] != "*":
+                    
+                    result[i] = s[i]
+                    
+                    break
+    
+    return "".join(result)
