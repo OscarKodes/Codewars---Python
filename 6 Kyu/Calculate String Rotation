@@ -1,0 +1,15 @@
+def shifted_diff(first, second):
+    
+    rotated = first
+    result = 0
+    
+    while rotated != second:
+        
+        rotated = rotated[-1] + rotated[:len(rotated) - 1]
+        result += 1
+        
+        if result >= len(first):
+            
+            return -1
+        
+    return result
