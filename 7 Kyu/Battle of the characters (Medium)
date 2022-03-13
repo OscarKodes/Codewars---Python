@@ -1,0 +1,14 @@
+ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+charVal = lambda ch: ABC.index(ch.upper()) + 1
+
+multiplier = lambda ch: 1 if ch.isupper() else 0.5
+
+strVal = lambda s: sum([charVal(c) * multiplier(c) for c in s])
+
+def battle(x: str, y: str) -> str:
+    
+    val1 = strVal(x)
+    val2 = strVal(y)
+    
+    return x if val1 > val2 else (y if val1 < val2 else "Tie!")
