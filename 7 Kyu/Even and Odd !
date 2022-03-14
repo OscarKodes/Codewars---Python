@@ -1,0 +1,16 @@
+def even_and_odd(n): 
+    
+    evens = "0"
+    odds = "0"
+    
+    for d in str(n):
+        
+        if int(d) % 2 == 0:
+            
+            evens = d if evens == "0" else evens + d
+            
+        else:
+            
+            odds = d if odds == "0" else odds + d
+            
+    return (int(evens), int(odds))
