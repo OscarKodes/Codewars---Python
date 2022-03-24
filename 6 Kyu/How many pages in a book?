@@ -1,0 +1,11 @@
+def amount_of_pages(summary):
+    
+    result = 0
+    digits = ""
+    
+    while len(digits) < summary:
+        
+        result += 1
+        digits += str(result)
+    
+    return result
