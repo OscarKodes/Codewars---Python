@@ -1,0 +1,32 @@
+def slices_to_name(n):
+    
+    result = []
+    
+    if type(n) is int and n > 1:
+        
+        if n % 2 == 1:
+            result.append("bread")
+            n -= 1
+
+        result = result + (["sandwich"] * int(n / 2))
+    
+    return None if result == [] else " ".join(result)
+
+def name_to_slices(name):
+    
+    result = 0
+    
+    if type(name) is str:
+        
+        name = name.split(" ")
+
+        if "bread" in name and len(name) - name[::-1].index("bread") == 1:
+            result += 1
+            name.remove("bread")
+        
+        if len([w for w in name if w == "sandwich"]) != len(name):
+            return None
+        
+        result += int(len(name) * 2)
+    
+    return None if result < 2 else result
