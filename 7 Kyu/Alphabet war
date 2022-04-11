@@ -1,0 +1,11 @@
+LEFT = "_sbpw"
+RIGHT = "_zdqm"
+
+getSum = lambda str, side: sum([side.index(c) for c in str if c in side])
+
+def alphabet_war(fight):
+    
+    leftSum = getSum(fight, LEFT)
+    rightSum = getSum(fight, RIGHT)
+    
+    return "Left side wins!" if leftSum > rightSum else ("Right side wins!" if leftSum < rightSum else "Let's fight again!") 
