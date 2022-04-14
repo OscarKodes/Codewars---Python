@@ -1,0 +1,14 @@
+getIdx = lambda word: int([c for c in word if c.isnumeric()][0]) - 1
+
+def order(s):
+
+    words = s.split(" ")
+    result = [""] * len(words)
+    
+    if len(s) > 0:
+    
+        for word in words:
+
+            result[getIdx(word)] = word
+        
+    return " ".join(result)
