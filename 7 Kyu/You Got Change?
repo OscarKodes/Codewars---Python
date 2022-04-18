@@ -1,0 +1,15 @@
+def give_change(amount): 
+    
+    bills = [100, 50, 20, 10, 5, 1]
+    leftover = amount
+    result = []
+    
+    for bill in bills:
+        
+        sheets = leftover // bill
+        result.append(sheets)
+        leftover -= sheets * bill
+    
+    result.reverse()
+    
+    return tuple(result)
