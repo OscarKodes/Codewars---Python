@@ -1,0 +1,43 @@
+def addIfNoneRemoveIfOne(seenWords, word):
+    
+    result = seenWords
+    
+    if word in result:
+        result.remove(word)
+        
+    else:
+        result.append(word)
+        
+    return result
+
+def line_up(hints):
+    
+    nextWord = {}
+    seenWords = []
+    result = []
+
+    for hint in hints:
+        
+        list = hint.split(" ")
+        
+        leftWord = list[0] if list[5] == "right" else list[2]
+        rightWord = list[0] if list[5] == "left" else list[2]
+        
+        if leftWord not in nextWord.keys():
+
+            seenWords = addIfNoneRemoveIfOne(seenWords, leftWord)
+            seenWords = addIfNoneRemoveIfOne(seenWords, rightWord)
+            nextWord[leftWord] = rightWord
+
+    idx0, idx1 = seenWords[0], seenWords[1]
+    firstWord = idx0 if idx0 in nextWord.keys() else idx1
+    lastWord = idx0 if idx0 != firstWord else idx1
+    result.append(firstWord)
+
+    while True:
+
+        result.append(nextWord[result[-1]])
+        
+        if result[-1] == lastWord: break
+
+    return result
