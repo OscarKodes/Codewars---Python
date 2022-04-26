@@ -1,0 +1,5 @@
+def is_narcissistic(n):
+    
+    digits = list(str(n))
+    
+    return sum([int(digit) ** len(digits) for digit in digits]) == n
