@@ -1,0 +1,1 @@
+string_clean = lambda s: "".join([c for c in list(s) if not c.isnumeric()])
