@@ -1,0 +1,11 @@
+values = {'q':9,'r':5,'b':3,'k':3,'p':1}
+
+def pieces_value(board, color):
+    
+    pieces = []
+
+    for row in board:
+        
+        pieces += [piece[2] for piece in row if piece[0] == color[0] and piece[2:] != "king"]
+        
+    return sum([values[piece] for piece in pieces])
