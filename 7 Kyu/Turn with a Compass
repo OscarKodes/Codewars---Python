@@ -1,0 +1,9 @@
+def direction(facing, turn):
+    
+    compass = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+    endIdx = compass.index(facing) + (turn / 45)
+    
+    while endIdx > 7: endIdx -= 8
+    while endIdx < 0: endIdx += 8
+    
+    return compass[int(endIdx)]
