@@ -1,0 +1,22 @@
+from math import sqrt
+
+def square_it(digits):
+
+    numStr = str(digits)
+    sqRoot = sqrt(len(numStr))
+    
+    if sqRoot != int(sqRoot):
+        
+        return "Not a perfect square!"
+    
+    else:
+        
+        result = []
+        size = int(sqRoot)
+        
+        while len(numStr) > 0:
+            
+            result.append(numStr[0:size])
+            numStr = numStr[size:]
+    
+        return "\n".join(result)
