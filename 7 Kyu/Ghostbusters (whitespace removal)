@@ -1,0 +1,5 @@
+def ghostbusters(building):
+    
+    result = "".join(building.split(" "))
+    
+    return result if result != building else "You just wanted my autograph didn't you?"
