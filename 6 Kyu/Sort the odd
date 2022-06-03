@@ -1,0 +1,5 @@
+def sort_array(list):
+    
+    odds = sorted([num for num in list if num % 2 == 1])
+    
+    return [(odds.pop(0) if num % 2 == 1 else num) for num in list]
