@@ -1,0 +1,21 @@
+def valid_braces(s):
+    
+    open = "({["
+    close = ")}]"
+    active = []
+    
+    for c in s:
+        
+        if c in open:
+            
+            active.append(c)
+            
+        elif len(active) > 0 and active[-1] == open[close.index(c)]:
+            
+            active.pop()
+            
+        else:
+            
+            return False
+        
+    return active == []
