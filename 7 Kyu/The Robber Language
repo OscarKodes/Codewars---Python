@@ -1,0 +1,9 @@
+robify = lambda c: c + ("o" if c.islower() else "O") + c
+
+def robber_encode(s):
+    
+    cons = "BCDFGHJKLMNPQRSTVWXYZ"
+    
+    list = [(robify(c) if c.upper() in cons else c) for c in s ]
+    
+    return "".join(list)
