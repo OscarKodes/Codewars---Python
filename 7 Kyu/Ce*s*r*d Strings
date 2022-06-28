@@ -1,0 +1,15 @@
+def uncensor(infected, discovered):
+    
+    result = ""
+    idx = 0
+    
+    for c in infected:
+        
+        if c == "*":
+            result += discovered[idx]
+            idx += 1
+            
+        else:
+            result += c
+            
+    return result
