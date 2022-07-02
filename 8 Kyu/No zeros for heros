@@ -1,0 +1,1 @@
+no_boring_zeros = lambda n: n if (n == 0 or n % 10 != 0) else no_boring_zeros(n / 10)
