@@ -1,0 +1,15 @@
+def merge(line):
+    
+    nonZeros = [n for n in line if n != 0]
+    
+    merged = []
+    
+    while len(nonZeros) > 0:
+        
+        if len(nonZeros) >= 2 and nonZeros[0] == nonZeros[1]:
+            
+            nonZeros[0] += nonZeros.pop(1)
+            
+        merged.append(nonZeros.pop(0))
+            
+    return merged + ((len(line) - len(merged)) * [0])
