@@ -1,0 +1,7 @@
+def chain(n, fxs):
+    
+    for fx in fxs:
+        
+        n = fx(n)
+    
+    return n
