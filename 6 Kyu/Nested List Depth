@@ -1,0 +1,13 @@
+def list_depth(l):
+    
+    if not isinstance(l, list):
+        
+        return 0
+    
+    elif len([e for e in l if isinstance(l, list)]) < 1:
+        
+        return 1
+    
+    else:
+        
+        return 1 + max(list_depth(e) for e in l)
