@@ -1,0 +1,7 @@
+import re
+
+def validate_usr(username):
+
+    x = re.findall("^[a-z0-9_]{4,16}$", username)
+    
+    return len(x) > 0
