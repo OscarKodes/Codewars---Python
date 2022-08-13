@@ -1,0 +1,14 @@
+winObj = {
+  "sc": ["pa", "li"],
+  "pa": ["ro", "sp"],
+  "ro": ["li", "sc"],
+  "li": ["sp", "pa"],
+  "sp": ["sc", "ro"]
+}
+
+def rpsls(pl1, pl2):
+    
+    s1 = pl1[0:2]
+    s2 = pl2[0:2]
+    
+    return "Player 1 Won!" if s2 in winObj[s1] else ("Draw!" if s1 == s2 else "Player 2 Won!")
