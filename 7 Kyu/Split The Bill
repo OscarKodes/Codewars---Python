@@ -1,0 +1,15 @@
+import numpy as np
+
+def split_the_bill(dict):
+
+    spentList = list(dict.values())
+    mean = np.mean(spentList)
+    owedList = [spent - mean for spent in spentList]
+    result = {}
+    
+    for i, key in enumerate(dict.keys()):
+    
+        diff = spentList[i] - mean
+        result[key] = int(diff) if diff % 1 == 0 else round(diff, 2)
+        
+    return result
