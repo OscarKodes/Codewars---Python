@@ -1,0 +1,5 @@
+def sort_array(lst):
+    
+    odds = sorted(n for n in lst if abs(n % 2) == 1)
+    
+    return [n if abs(n % 2) != 1 else odds.pop(0) for n in lst]
