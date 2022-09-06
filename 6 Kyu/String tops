@@ -1,0 +1,15 @@
+def tops(msg):
+    
+    tri = 1
+    idx = 0
+    chunk = (tri * 2) - 1
+    tops = ""
+    
+    while chunk + idx < len(msg):
+        
+        idx = chunk + idx
+        tops += msg[idx]
+        tri += 2
+        chunk = (tri * 2) - 1
+    
+    return tops[::-1]
