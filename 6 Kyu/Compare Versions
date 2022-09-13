@@ -1,0 +1,19 @@
+def compare_versions(version1,version2):
+    
+    v1 = [int(s) for s in version1.split(".")]
+    v2 = [int(s) for s in version2.split(".")]
+    
+    for i in range(max(len(v1), len(v2))):
+        
+        n1 = 0 if i >= len(v1) else v1[i]
+        n2 = 0 if i >= len(v2) else v2[i]
+
+        if n1 < n2:
+            
+            return False
+        
+        elif n1 > n2:
+            
+            return True
+    
+    return True
