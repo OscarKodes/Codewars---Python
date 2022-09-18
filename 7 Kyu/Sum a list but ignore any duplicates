@@ -1,0 +1,13 @@
+def sum_no_duplicates(l):
+    
+    listCheck = []
+    sum = 0
+    
+    for n in l:
+        
+        listCheck = l[:]
+        listCheck.remove(n)
+        
+        sum += n if n not in listCheck else 0 
+        
+    return sum
