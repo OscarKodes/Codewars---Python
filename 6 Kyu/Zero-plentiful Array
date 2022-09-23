@@ -1,0 +1,19 @@
+def zero_plentiful(arr):
+    
+    zeroList = []
+    zeroCount = 0
+    
+    for i, n in enumerate(arr):
+        
+        if n == 0:
+            
+            zeroCount += 1
+        
+        if zeroCount > 0 and (i + 1 == len(arr) or n != 0):
+            
+            zeroList.append(zeroCount)
+            zeroCount = 0
+    
+    lessThanFour = [n for n in zeroList if n < 4]
+    
+    return 0 if len(lessThanFour) > 0 else len(zeroList)
