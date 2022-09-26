@@ -1,0 +1,9 @@
+import math
+
+def quadratic_formula(a, b, c):
+    
+    negB = b * -1
+    sqrt = math.sqrt((b**2) - 4 * a * c)
+    denom = 2 * a
+    
+    return [(negB + sqrt) / denom, (negB - sqrt) / denom]
