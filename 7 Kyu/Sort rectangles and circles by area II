@@ -1,0 +1,9 @@
+from math import pi 
+
+cArea = lambda r: pi * r ** 2
+
+rArea = lambda t: t[0] * t[1]
+
+getArea = lambda e: rArea(e) if isinstance(e, tuple) else cArea(e)
+
+sort_by_area = lambda seq: sorted(seq[:], key=getArea)
