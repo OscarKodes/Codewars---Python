@@ -1,0 +1,11 @@
+roll = lambda: "00" + str(one_two() - 1) + str(one_two() - 1)
+
+def one_two_three():
+    
+    binary = roll()
+    
+    while binary == "0000":
+        
+        binary = roll()
+        
+    return int(binary, 2)
