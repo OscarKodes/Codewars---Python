@@ -1,0 +1,5 @@
+vowels = "aeiou"
+
+encode = lambda s: "".join([(c if c not in vowels else str(vowels.index(c) + 1)) for c in s])
+    
+decode = lambda s: "".join([(c if not c.isnumeric() else vowels[int(c) - 1]) for c in s])
