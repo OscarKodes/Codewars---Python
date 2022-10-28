@@ -1,0 +1,38 @@
+def getHeadTail(s):
+    
+    startIdx = -1;
+    prevNum = False
+    
+    for i, c in enumerate(s):
+        
+        if c.isnumeric():
+            
+            if not prevNum:
+                
+                startIdx = i
+            
+            prevNum = True
+            
+        else:
+            
+            prevNum = False
+            
+    head = s if startIdx == -1 else s[:startIdx]
+    tail = "" if startIdx == -1 else s[startIdx:]
+    
+    return (head, tail)
+
+def getNewTail(tail):
+    
+    num = 0 if tail == "" else int(tail) + 1
+    zeros = (len(tail) - len(str(num))) * "0"
+    newTail = zeros + str(num)
+    
+    return newTail
+
+def increment_string(s):
+
+    head, tail = getHeadTail(s)
+    newTail = getNewTail(tail)
+    
+    return s + "1" if tail == "" else head + newTail
