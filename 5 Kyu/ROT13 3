@@ -1,0 +1,11 @@
+ABC = "abcdefghijklmnopqrstuvwxyz"
+
+def newCh(c):
+    
+    i = ABC.index(c.lower())
+    
+    return ABC[i + (13 if i < 12 else -13)]
+ 
+keepCase = lambda c1, c2: c2.upper() if (c1 == c1.upper()) else c2
+
+rot13 = lambda m: "".join(c if not c.isalpha() else keepCase(c, newCh(c)) for c in m)
