@@ -1,0 +1,1 @@
+largest_pair_sum = lambda n: sum(sorted(n, reverse=True)[0:2])
