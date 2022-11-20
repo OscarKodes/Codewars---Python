@@ -1,0 +1,7 @@
+def number_joy(n):
+    
+    digitSum = sum(int(n) for n in list(str(n)))
+    
+    reversing = int(str(digitSum)[::-1])
+    
+    return digitSum * reversing == n
