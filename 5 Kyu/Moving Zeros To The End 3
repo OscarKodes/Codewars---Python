@@ -1,0 +1,1 @@
+move_zeros = lambda l: [n for n in l if n != 0] + [0] * l.count(0)
