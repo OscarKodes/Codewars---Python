@@ -1,0 +1,17 @@
+import math
+
+def validatePalin(val):
+    
+    strVal = str(val)
+    left = strVal[:math.floor(len(strVal)/2)]
+    right = strVal[math.ceil(len(strVal)/2):]
+    
+    return left == right[::-1]
+
+def next_pal(val):
+    
+    num = val + 1
+    
+    while not validatePalin(num): num += 1
+        
+    return num
