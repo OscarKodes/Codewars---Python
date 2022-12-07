@@ -1,0 +1,7 @@
+def last_survivor(letters, coords): 
+    
+    ls = list(letters)
+    
+    for c in coords: ls.pop(c)
+        
+    return ls[0]
