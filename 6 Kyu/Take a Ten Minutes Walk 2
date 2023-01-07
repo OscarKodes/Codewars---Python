@@ -1,0 +1,16 @@
+def is_valid_walk(walk):
+    
+    x = 0
+    y = 0
+    
+    for d in walk:
+        
+        if d in "we":
+            
+            x += 1 if d == "w" else -1
+            
+        else:
+            
+            y += 1 if d == "n" else -1
+            
+    return len(walk) == 10 and x == 0 and y == 0
