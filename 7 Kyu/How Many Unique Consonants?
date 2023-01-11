@@ -1,0 +1,1 @@
+count_consonants = lambda text: len(set(c for c in text.lower() if c.isalpha() and c not in 'aeiou'))
