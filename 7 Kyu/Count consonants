@@ -1,0 +1,1 @@
+consonant_count = lambda s: len([c for c in s if c.isalpha() and c.lower() not in "aeiou"])
