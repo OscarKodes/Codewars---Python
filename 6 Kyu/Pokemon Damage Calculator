@@ -1,0 +1,24 @@
+type_weaknesses = {
+    "fire": ["water"],
+    "grass": ["fire"],
+    "water": ["grass", "electric"],
+    "electric": []    
+}
+
+def effectiveness(your_type, opponent_type):
+    
+    multiplier = 1
+    
+    if your_type in type_weaknesses[opponent_type]:
+        
+        multiplier = 2
+        
+    elif opponent_type in type_weaknesses[your_type] or your_type == opponent_type:
+        
+        multiplier = 0.5
+        
+    return multiplier
+
+def calculate_damage(your_type, opponent_type, attack, defense):
+    
+    return 50 * (attack / defense) * effectiveness(your_type, opponent_type)
