@@ -1,0 +1,1 @@
+largest = lambda n,list: sorted(list)[len(list) - n:]
