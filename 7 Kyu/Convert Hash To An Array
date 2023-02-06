@@ -1,0 +1,1 @@
+convert_hash_to_array = lambda hash: sorted([list(e) for e in list(hash.items())]) 
