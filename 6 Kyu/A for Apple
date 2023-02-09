@@ -1,0 +1,29 @@
+import math
+
+def a(n):
+    
+    allLines = []
+    isEven = n % 2 == 0
+    
+    for i in range(n if isEven else n - 1):
+        
+        len = 2 * n - 1 if isEven else 2 * n - 3
+        line = [" "] * len
+        firstIdx = int((len / 2) - i)
+        
+        line[firstIdx] = "A"
+        
+        if i > 0:
+            
+            nextIdx = int(len / 2 + i)
+            line[nextIdx] = "A"
+            
+            if i == math.floor(n / 2):
+                
+                for j in range(firstIdx, nextIdx, 2):
+                    
+                    line[j] = "A"
+                    
+        allLines.append("".join(line))
+
+    return "" if n < 4 else "\n".join(allLines)
