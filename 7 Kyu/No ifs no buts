@@ -1,0 +1,8 @@
+def no_ifs_no_buts(a, b):
+    
+    notEqual = int(a != b)
+    isLarger = int(a > b)
+    list = [["equal to", "equal to"], ["smaller than", "greater than"]]
+    comparison = list[notEqual][isLarger]
+    
+    return '{a} is {comparison} {b}'.format(a = a, b = b, comparison = comparison)
