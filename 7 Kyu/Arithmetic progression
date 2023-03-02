@@ -1,0 +1,5 @@
+def arithmetic_sequence_elements(a, d, n):
+    
+    strNums = [str(num + d * i) for i, num in enumerate([a] * n)]
+
+    return ", ".join(strNums)
