@@ -1,0 +1,1 @@
+vowel_one = lambda s: "".join(("1" if c.lower() in "aeiou" else "0") for c in s)
