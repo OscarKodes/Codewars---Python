@@ -1,0 +1,7 @@
+def band_name_generator(name):
+    
+    sameLetter = name[0] == name[-1]
+    firstCh = name[0].upper()
+    tail = name[1:]
+    
+    return firstCh + tail + tail if sameLetter else "The " + firstCh + tail
