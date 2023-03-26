@@ -1,0 +1,1 @@
+solution = lambda s: "".join((" " + c if c.upper() == c else c) for c in s)
