@@ -1,0 +1,7 @@
+def is_it_a_num(s):
+    
+    nums = [c for c in s if c.isnumeric()]
+    
+    valid = len(nums) > 0 and nums[0] == "0" and len(nums) == 11 
+    
+    return "Not a phone number" if not valid else "".join(nums)
