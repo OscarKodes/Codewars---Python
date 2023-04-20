@@ -1,0 +1,21 @@
+def find_hack(a):
+    
+    gradesDict = {"A":30, "B":20, "C":10, "D":5}
+    copyA = a.copy()
+    result = []
+    
+    for student in copyA:
+        
+        grades = [(0 if grade not in "ABCD" else gradesDict[grade]) for grade in student[2]]
+        total = sum(grades)
+        
+        if len(grades) >= 5 and min(grades) >= 20:
+            
+            total += 20
+            total = 200 if total > 200 else total
+
+        if (student[1] > 200) or (student[1] != total):
+            
+            result.append(student[0])
+
+    return result
