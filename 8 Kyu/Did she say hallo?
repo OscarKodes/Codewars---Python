@@ -1,0 +1,13 @@
+import re
+
+def validate_hello(greetings):
+    
+    patterns = ["hello", "ciao", "salut", "hallo", "hola", "ahoj", "czesc"]
+
+    for pattern in patterns:
+        
+        if re.search(pattern, greetings, re.IGNORECASE):
+            
+            return True
+            
+    return False
