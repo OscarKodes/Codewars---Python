@@ -1,0 +1,8 @@
+import re
+
+def reverse_vowels(s):
+    
+    vowels = "aeiouAEIOU"
+    capturedVowels = re.findall(f"[{vowels}]", s)
+    
+    return "".join([(c if c not in vowels else capturedVowels.pop()) for c in s])
