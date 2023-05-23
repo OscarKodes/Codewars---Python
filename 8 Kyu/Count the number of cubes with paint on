@@ -1,0 +1,9 @@
+def count_squares(n):
+    
+    fullFace = (n + 1) ** 2
+    lessFace = fullFace - (n + 1) * 2
+    leastFace = lessFace - (n - 1) * 2
+    
+    painted = 2 * (fullFace + lessFace + leastFace)
+    
+    return 1 if n == 0 else painted
