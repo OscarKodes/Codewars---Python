@@ -1,0 +1,14 @@
+def solution(s):
+    
+    result = []
+    
+    for i, e in enumerate(s):
+        
+        c1 = e
+        c2 = "_" if i >= len(s) - 1 else s[i + 1]
+        
+        if i % 2 == 0:
+            
+            result.append(c1 + c2)
+            
+    return result
