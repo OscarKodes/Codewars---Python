@@ -1,0 +1,14 @@
+def anagram_difference(w1, w2):
+    
+    same = 0
+    copy1 = w1[:]
+    copy2 = list(w2[:])
+    
+    for c in copy1:
+        
+        if c in copy2:
+            
+            same += 2
+            copy2.remove(c)
+            
+    return len(w1) + len(w2) - same
