@@ -1,0 +1,1 @@
+solution = lambda t, e: t[len(t) - len(e):] == e
