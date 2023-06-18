@@ -1,0 +1,1 @@
+find_array = lambda a1, a2: [a1[n] for n in a2 if n < len(a1)]
