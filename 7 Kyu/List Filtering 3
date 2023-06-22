@@ -1,0 +1,1 @@
+filter_list = lambda l: [c for c in l if type(c) is int]
