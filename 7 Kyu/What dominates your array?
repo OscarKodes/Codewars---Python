@@ -1,0 +1,9 @@
+def dominator(arr):
+    
+    for n in set(arr):
+        
+        if arr.count(n) > len(arr) / 2:
+            
+            return n
+    
+    return -1
