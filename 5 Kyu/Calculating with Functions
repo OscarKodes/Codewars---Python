@@ -1,0 +1,17 @@
+calc = lambda n, s: n if s == "" else int(eval(n + s))
+
+zero = lambda s="": calc("0", s)
+one = lambda s="": calc("1", s)
+two = lambda s="": calc("2", s)
+three = lambda s="": calc("3", s)
+four = lambda s="": calc("4", s)
+five = lambda s="": calc("5", s)
+six = lambda s="": calc("6", s)
+seven = lambda s="": calc("7", s)
+eight = lambda s="": calc("8", s)
+nine = lambda s="": calc("9", s)
+
+plus = lambda s: "+" + s
+minus = lambda s: "-" + s
+times = lambda s: "*" + s
+divided_by = lambda s: "/" + s
