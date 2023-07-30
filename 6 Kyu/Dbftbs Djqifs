@@ -1,0 +1,24 @@
+def encryptor(key, message):
+    
+    abc = "abcdefghijklmnopqrstuvwxyz"
+    result = ""
+    
+    for c in message:
+        
+        newChar = c
+        
+        if c.isalpha():
+        
+            newIdx = abc.index(c.lower()) + key
+            newIdx = newIdx % 26
+
+            while newIdx < 0:
+
+                newIdx += 26
+
+            newChar = abc[newIdx]
+            newChar = newChar if c.islower() else newChar.upper()
+        
+        result += newChar
+        
+    return result
