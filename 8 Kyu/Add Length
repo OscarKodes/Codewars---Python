@@ -1,0 +1,1 @@
+add_length = lambda str_: [s + " " + str(len(s)) for s in str_.split(" ")]
