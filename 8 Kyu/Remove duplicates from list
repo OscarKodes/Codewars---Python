@@ -1,0 +1,1 @@
+distinct = lambda seq: [n for i, n in enumerate(seq) if n not in seq[:i]]
