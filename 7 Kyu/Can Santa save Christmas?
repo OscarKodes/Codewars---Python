@@ -1,0 +1,8 @@
+def getHrs(a, unit):
+    
+    idx = {"H":0, "M":3, "S":6}
+    d = {"H":1, "M":60, "S":3600}
+
+    return sum([int(s[idx[unit]:idx[unit] + 2]) for s in a]) / d[unit]
+
+determine_time = lambda a: getHrs(a, "H") + getHrs(a, "M") + getHrs(a, "S") <= 24
