@@ -1,0 +1,15 @@
+def pattern(rows, columns, s):
+    
+    line = "+" + "---+" * columns
+    resultArr = [line]
+    
+    for i in range(rows):
+        
+        startIdx = i * columns
+        thisRow = s[startIdx:startIdx + columns] 
+        thisRow += " " * (columns - len(thisRow))
+        
+        resultArr.append("| " + " | ".join(list(thisRow)) + " |")
+        resultArr.append(line)
+
+    return "\n".join(resultArr)
