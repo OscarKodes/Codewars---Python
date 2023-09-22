@@ -1,0 +1,16 @@
+def combine(*args):
+    
+    saved_args = locals()["args"]
+    result = {}
+    
+    for i in range(len(saved_args)):
+        
+        dic = saved_args[i]
+        keyList = dic.keys()
+        
+        for k in keyList:
+            
+            stored = 0 if k not in result.keys() else result[k]
+            result[k] = stored + dic[k]
+            
+    return result
