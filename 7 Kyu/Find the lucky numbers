@@ -1,0 +1,1 @@
+filter_lucky = lambda lst: [n for n in lst if "7" in str(n)]
