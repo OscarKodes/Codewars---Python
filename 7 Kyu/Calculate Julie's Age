@@ -1,0 +1,9 @@
+def age(plus, times):
+    
+    brother = 0
+
+    while (brother + plus) != round(brother * times, 4):
+        
+        brother += 1
+        
+    return brother + plus
