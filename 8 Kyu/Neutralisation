@@ -1,0 +1,1 @@
+neutralise = lambda s1, s2: "".join([("0" if s2[i] != c else c) for i, c in enumerate(s1)])
