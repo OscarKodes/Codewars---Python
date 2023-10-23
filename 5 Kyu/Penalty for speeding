@@ -1,0 +1,25 @@
+def getNextNum(list):
+    
+    smallest = list[0]
+    
+    for n in list:
+        
+        if n + smallest < smallest + n:
+            
+            smallest = n
+    
+    return smallest
+
+def penalty(numbers):
+    
+    result = []
+    leftover = numbers.copy()
+    
+    while len(leftover) > 0:
+        
+        nextNum = getNextNum(leftover)
+        result.append(nextNum)
+        
+        leftover.remove(nextNum)
+        
+    return "".join(result)
