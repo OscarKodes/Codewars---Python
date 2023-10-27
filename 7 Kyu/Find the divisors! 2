@@ -1,0 +1,5 @@
+def divisors(integer):
+    
+    result = [n for n in range(2, integer) if integer % n == 0]
+    
+    return result if len(result) > 0 else f"{integer} is prime"
