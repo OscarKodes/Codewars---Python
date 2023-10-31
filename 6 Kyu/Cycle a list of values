@@ -1,0 +1,1 @@
+cycle = lambda d, v, c: None if c not in v else v[(v.index(c) + d) % len(v)]
