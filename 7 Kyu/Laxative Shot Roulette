@@ -1,0 +1,11 @@
+def get_chance(n, x, a):
+    
+    shotsLeft = n
+    chanceOfSafe = 1
+    
+    for drink in range(a):
+        
+        chanceOfSafe -= chanceOfSafe * (x / shotsLeft)
+        shotsLeft -= 1
+        
+    return round(chanceOfSafe, 2)
