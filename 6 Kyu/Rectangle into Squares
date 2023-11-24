@@ -1,0 +1,21 @@
+def sq_in_rect(l, w):
+    
+    short = min(l, w)
+    long = max(l, w)
+    result = [short]
+    
+    while short > 0:
+        
+        newSide = long - short
+        
+        if short < newSide:
+            long = newSide
+            
+        else:
+            long = short
+            short = newSide
+            
+        if short != 0:
+            result.append(short)
+            
+    return None if l == w else result
