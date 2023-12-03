@@ -1,0 +1,7 @@
+def to_currency(price):
+    
+    reverseDigits = list(str(price))[::-1]
+    
+    withCommas = [c + "," if i > 0 and i % 3 == 0 else c for i, c in enumerate(reverseDigits)] 
+    
+    return "".join(withCommas[::-1])
