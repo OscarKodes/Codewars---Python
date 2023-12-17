@@ -1,0 +1,7 @@
+import math
+
+def spin_around(lst):
+    
+    total = abs(sum([(1 if d[0] == "r" else -1) for d in lst]))
+
+    return math.floor(total / 4)
