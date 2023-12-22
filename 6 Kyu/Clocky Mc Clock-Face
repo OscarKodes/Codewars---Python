@@ -1,0 +1,20 @@
+import math
+
+def getHour(angle):
+    
+    hrs = math.floor(angle / 30)
+    
+    if hrs == 0: hrs = 12
+    if hrs < 10: hrs = "0" + str(hrs)
+    
+    return str(hrs)
+
+def getMin (angle):
+    
+    min = math.floor((angle % 30) * 2)
+    
+    if min < 10: min = "0" + str(min)
+    
+    return str(min)
+
+what_time_is_it = lambda angle: getHour(angle) + ":" + getMin(angle)
