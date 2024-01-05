@@ -1,0 +1,9 @@
+def cant_beat_so_join(numbers):
+    
+    list = sorted(numbers, key=lambda a: sum(a), reverse=True)
+    result = []
+
+    for a in list: 
+        result += a
+        
+    return result
