@@ -1,0 +1,9 @@
+def pattern(n):
+    
+    list = [str(i)[-1] for i in range(1, n + 1)]
+    
+    top = [(" " * (len(list) - 1)) + s for s in list][:-1]
+    mid = ["".join(list + list[::-1][1:])]
+    bot = top[::-1]
+
+    return "\n".join(top + mid + bot) + "\n"
