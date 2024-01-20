@@ -1,0 +1,5 @@
+def is_flush(cards):
+    
+    suit = cards[0][-1]
+    
+    return len([s for s in cards if suit == s[-1]]) == len(cards)
