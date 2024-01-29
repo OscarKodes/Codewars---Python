@@ -1,0 +1,8 @@
+# https://www.codewars.com/kata/58d248c7012397a81800005c
+
+def cube_checker(volume, side):
+    
+    isValid = volume > 0 and side > 0
+    isEqual = volume == side ** 3
+    
+    return isValid and isEqual
