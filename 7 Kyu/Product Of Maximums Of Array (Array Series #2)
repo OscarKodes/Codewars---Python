@@ -1,0 +1,11 @@
+# https://www.codewars.com/kata/5a63948acadebff56f000018
+
+def max_product(l, n):
+    
+    result = 1
+    
+    for n in sorted(l)[::-1][0:n]:
+        
+        result *= n
+    
+    return result
