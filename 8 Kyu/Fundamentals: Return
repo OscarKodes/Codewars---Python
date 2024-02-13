@@ -1,0 +1,8 @@
+# https://www.codewars.com/kata/55a5befdf16499bffb00007b
+
+add = lambda a, b: a + b
+multiply = lambda a, b: a * b
+divide = lambda a, b: a / b
+mod = lambda a, b: a % b
+exponent = lambda a, b: a ** b
+subt = lambda a, b: a - b
