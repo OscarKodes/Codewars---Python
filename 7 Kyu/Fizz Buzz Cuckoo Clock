@@ -1,0 +1,21 @@
+# https://www.codewars.com/kata/58485a43d750d23bad0000e6
+
+def fizz_buzz_cuckoo_clock(time):
+    
+    m = int(time[3:])
+    result = []
+    
+    if m == 0:
+        
+        h = int(time[0:2])
+        h = 12 if h == 0 else (h % 12 if h > 12 else h)
+        
+        return ("Cuckoo " * h).strip()
+    
+    if m == 30: return "Cuckoo"
+    
+    if m % 3 == 0: result.append("Fizz")
+    
+    if m % 5 == 0: result.append("Buzz")
+    
+    return "tick" if len(result) == 0 else " ".join(result)
