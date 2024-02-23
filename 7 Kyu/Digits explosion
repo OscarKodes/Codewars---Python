@@ -1,0 +1,3 @@
+# https://www.codewars.com/kata/585b1fafe08bae9988000314
+
+explode = lambda s: "" if len(s) == 0 else s[0] * int(s[0]) + explode(s[1:])
