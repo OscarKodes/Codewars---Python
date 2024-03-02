@@ -1,0 +1,19 @@
+# https://www.codewars.com/kata/537400e773076324ab000262
+
+def group_anagrams(words):
+    
+    idxDict = {}
+    result = []
+    
+    for s in words:
+        anagram = "".join(sorted(list(s)))
+        keys = idxDict.keys()
+        
+        if anagram in keys:
+            result[idxDict[anagram]].append(s)
+            
+        else:
+            idxDict[anagram] = len(result)
+            result.append([s])
+            
+    return result;
