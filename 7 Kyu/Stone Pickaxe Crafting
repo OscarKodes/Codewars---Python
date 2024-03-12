@@ -1,0 +1,10 @@
+https://www.codewars.com/kata/65c0161a2380ae78052e5731
+
+def stone_pick(arr):
+    
+    rockCap = arr.count("Cobblestone") / 3
+    stickCap = (arr.count("Sticks") + (arr.count("Wood") * 4)) / 2
+    
+    axes = rockCap if rockCap < stickCap else stickCap
+    
+    return int(axes)
