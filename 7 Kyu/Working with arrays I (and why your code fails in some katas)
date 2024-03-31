@@ -1,0 +1,1 @@
+without_last = lambda l: l[:-1]
