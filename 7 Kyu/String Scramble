@@ -1,0 +1,9 @@
+def scramble(strng, array):
+    
+    result = [""] * len(strng)
+    
+    for i, n in enumerate(array):
+        
+        result[n] = strng[i]
+        
+    return "".join(result)
