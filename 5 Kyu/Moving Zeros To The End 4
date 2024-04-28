@@ -1,0 +1,5 @@
+def move_zeros(lst):
+    
+    noZeros = [n for n in lst[:] if n != 0]
+    
+    return noZeros + [0] * (len(lst) - len(noZeros))
