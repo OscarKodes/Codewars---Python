@@ -1,0 +1,22 @@
+# https://www.codewars.com/kata/6627696c86b953001280675e
+
+emojiDict = {
+  ":)":0,
+  ":D":1,
+  ">(":2,
+  ">:C":3,
+  ":/":4,
+  ":|":5,
+  ":O":6,
+  ";)":7,
+  "^.^":8,
+  ":(":9
+}
+
+def deemojify(emote_string):
+    
+    numStrList = ["".join([str(emojiDict[emote]) for emote in string.split(" ")]) for string in [s for s in emote_string.split("  ")]]
+    
+    charList = [chr(int(numStr)) for numStr in numStrList]
+    
+    return "".join(charList)
