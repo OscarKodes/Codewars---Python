@@ -1,0 +1,16 @@
+# https://www.codewars.com/kata/58ee4db3e479611e6f000086
+
+def bit_march (n : int) -> list:
+    
+    zeros = [0] * (8 - n)
+    ones = [1] * n
+    row = zeros + ones
+    result = [row]
+    
+    for i in range(0, 8 - n):
+        
+        row = row[1:]
+        row.append(0)
+        result.append(row)
+        
+    return result
