@@ -1,0 +1,12 @@
+# https://www.codewars.com/kata/5a5915b8d39ec5aa18000030
+
+def find_missing(arr1, arr2):
+    
+    longer = sorted(arr1 if len(arr1) > len(arr2) else arr2)
+    shorter = sorted(arr1 if len(arr1) < len(arr2) else arr2)
+    
+    for i, n in enumerate(shorter):
+        if longer[i] != n:
+            return longer[i]
+
+    return longer[-1]
