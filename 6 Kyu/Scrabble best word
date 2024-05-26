@@ -1,0 +1,9 @@
+def get_best_word(points, words):
+    
+    abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    
+    scored = [sum([points[abc.index(c)] for c in list(word)]) for word in words]
+    maxScore = max(scored)
+    topScoreLengths = [(float("inf") if score != maxScore else len(words[i])) for i, score in enumerate(scored)]
+
+    return topScoreLengths.index(min(topScoreLengths));
