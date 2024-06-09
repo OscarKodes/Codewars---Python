@@ -1,0 +1,7 @@
+# https://www.codewars.com/kata/546f922b54af40e1e90001da
+
+def alphabet_position(text):
+    
+    abc = "abcdefghijklmnopqrstuvwxyz"
+    
+    return " ".join([str(abc.index(c) + 1) for c in text.lower() if c in abc])
