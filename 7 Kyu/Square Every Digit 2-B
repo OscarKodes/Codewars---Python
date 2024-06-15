@@ -1,0 +1,4 @@
+# https://www.codewars.com/kata/546e2562b03326a88e000020
+# Listed as "2-B" because I came to the same exact solution again after 13 months.
+
+square_digits = lambda n: int("".join([str(int(c) ** 2) for c in str(n)]))
