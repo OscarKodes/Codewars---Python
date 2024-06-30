@@ -1,0 +1,22 @@
+def count_feelings(st, arr):
+    
+    count = 0
+    
+    for f in arr:
+        
+        sList = list(st)
+        hasFeeling = 1
+        
+        for c in f:
+            
+            if c in sList:
+                sList.remove(c)
+                
+            else:
+                hasFeeling = 0
+                break
+        
+        count += hasFeeling
+        
+    return "1 feeling." if count == 1 else str(count) + " feelings."
+            
