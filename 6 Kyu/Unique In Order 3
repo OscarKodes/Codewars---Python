@@ -1,0 +1,7 @@
+# https://www.codewars.com/kata/54e6533c92449cc251001667
+
+def unique_in_order(seq):
+    
+    copy = list(seq)
+    
+    return [c for i, c in enumerate(copy) if i == 0 or seq[i - 1] != c]
