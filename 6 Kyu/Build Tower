@@ -1,0 +1,16 @@
+# https://www.codewars.com/kata/576757b1df89ecf5bd00073b
+
+def tower_builder(n_floors):
+    
+    result = []
+    
+    for row in range(n_floors):
+        
+        starLen = ((row + 1) * 2) - 1
+        stars = "*" * starLen
+        spaceLen = int(((n_floors * 2 - 1) - starLen) / 2)
+        spaces = " " * spaceLen
+        
+        result.append(spaces + stars + spaces)
+        
+    return result
