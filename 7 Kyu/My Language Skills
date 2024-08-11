@@ -1,0 +1,5 @@
+def my_languages(results):
+
+    lgSorted = sorted(results, key=results.get, reverse=True);
+    
+    return [lg for lg in lgSorted if results[lg] >= 60]
