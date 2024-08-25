@@ -1,0 +1,9 @@
+# https://www.codewars.com/kata/59325dc15dbb44b2440000af
+
+def is_alt(s):
+
+    vowels = "aeiou"
+    
+    altList = [c for i, c in enumerate(s) if i == 0 or ((c in vowels) != (s[i-1] in vowels))]
+    
+    return "".join(altList) == s
