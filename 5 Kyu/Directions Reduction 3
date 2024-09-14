@@ -1,0 +1,17 @@
+# https://www.codewars.com/kata/550f22f4d758534c1100025a
+
+def dir_reduc(arr):
+    
+    result = []
+    opposite = {"NORTH":"SOUTH","SOUTH":"NORTH","EAST":"WEST","WEST":"EAST"};
+    
+    for d in arr:
+        
+        if len(result) > 0 and result[-1] == opposite[d]:
+            result.pop(-1)
+            
+        else:
+            result.append(d)
+    
+    return result
+        
