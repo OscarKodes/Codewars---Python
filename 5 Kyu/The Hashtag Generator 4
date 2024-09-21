@@ -1,0 +1,11 @@
+# https://www.codewars.com/kata/52449b062fb80683ec000024
+
+def generate_hashtag(s):
+    
+    check = len("".join(s.split(" ")))
+    
+    if check > 0 and check < 140:
+        
+        return "#" + "".join([w.title() for w in s.split(" ") if len(w) > 0])
+    
+    return False
