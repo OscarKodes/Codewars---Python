@@ -1,0 +1,15 @@
+# https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+
+def solution(s):
+    
+    result = []
+    
+    for i in range(0, len(s), 2):
+        
+        c1 = s[i]
+        c2 = "_" if i + 1 >= len(s) else s[i+1] 
+        
+        result.append(c1 + c2)
+        
+    return result
+        
