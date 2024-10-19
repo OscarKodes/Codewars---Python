@@ -1,0 +1,16 @@
+def replace_common(st, letter):
+    
+    copy = st[::-1].replace(" ", "")
+    maxCount = 0
+    topLetter = copy[0]
+    
+    for c in copy:
+        
+        nowCount = copy.count(c)
+        
+        if nowCount >= maxCount:
+            
+            maxCount = nowCount
+            topLetter = c
+            
+    return st.replace(topLetter, letter)
