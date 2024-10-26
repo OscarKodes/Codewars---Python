@@ -1,0 +1,11 @@
+def filter_string(st):
+    
+    result = ""
+    
+    for c in st:
+        
+        if c.isnumeric():
+            
+            result += c
+            
+    return int(result)
