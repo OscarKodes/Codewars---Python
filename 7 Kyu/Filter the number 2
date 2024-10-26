@@ -1,0 +1,1 @@
+filter_string = lambda s: int("".join(c for c in s if c.isnumeric()))
