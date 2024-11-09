@@ -1,0 +1,14 @@
+def maxSequence(arr):
+    
+    sumNow = 0
+    result = 0
+    
+    for n in arr:
+        
+        sumNow = 0 if sumNow + n < 0 else sumNow + n
+
+        if sumNow > result:
+            result = sumNow
+    
+    return result
+
