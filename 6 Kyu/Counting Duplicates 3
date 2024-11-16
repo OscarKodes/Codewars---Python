@@ -1,0 +1,12 @@
+def duplicate_count(text):
+    
+    duplicated = []
+    copy = text[:].lower()
+    
+    for i, c in enumerate(copy):
+        
+        if (c in copy[:i]) and (c not in duplicated):
+            
+            duplicated.append(c)
+
+    return len(duplicated)
