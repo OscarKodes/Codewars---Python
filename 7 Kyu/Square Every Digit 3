@@ -1,0 +1,1 @@
+square_digits = lambda n: int("".join([str(int(nStr) ** 2) for nStr in str(n)]))
