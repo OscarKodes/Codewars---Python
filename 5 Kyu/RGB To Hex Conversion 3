@@ -1,0 +1,6 @@
+def rgb(r, g, b):
+    
+    ls = [0 if n < 0 else (255 if n > 255 else n) for n in [r, g, b]]
+    hex = '%02x%02x%02x' % (ls[0], ls[1], ls[2])
+    
+    return hex.upper()
