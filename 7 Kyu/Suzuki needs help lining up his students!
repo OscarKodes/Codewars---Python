@@ -1,0 +1,6 @@
+def lineup_students(st):
+    
+    firstPass = sorted(st.split(" "), reverse = True)
+    secondPass = sorted(firstPass, key = lambda s: len(s), reverse = True)
+
+    return secondPass
