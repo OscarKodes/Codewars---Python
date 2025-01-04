@@ -1,0 +1,7 @@
+def to_camel_case(text):
+    
+    wordList = "".join([" " if c in "-_ " else c for c in text])
+    
+    camelStr = "".join([("" if len(word) == 0 else word[0].upper() + word[1:].lower()) for word in wordList.split(" ")])
+    
+    return "" if len(text) == 0 else text[0] + camelStr[1:]
