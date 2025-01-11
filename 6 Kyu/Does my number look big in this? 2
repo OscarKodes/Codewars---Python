@@ -1,0 +1,5 @@
+def narcissistic( value ):
+    
+    vStr = str(value)
+    
+    return value == sum([int(nStr) ** len(vStr) for nStr in vStr])
