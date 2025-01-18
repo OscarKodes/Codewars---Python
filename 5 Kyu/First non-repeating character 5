@@ -1,0 +1,5 @@
+def first_non_repeating_letter(s):
+    
+    result = [c for c in s if s.upper().count(c.upper()) == 1]
+
+    return "" if len(result) == 0 else result[0]
