@@ -1,0 +1,19 @@
+# https://www.codewars.com/kata/57eb8fcdf670e99d9b000272
+
+ABC = "abcdefghijklmnopqrstuvwxyz"
+
+def high(s):
+    
+    highScore = 0
+    result = ""
+    
+    for word in s.split(" "):
+        
+        score = sum([ABC.index(c) + 1 for c in word])
+        
+        if score > highScore:
+            
+            highScore = score
+            result = word
+            
+    return result
