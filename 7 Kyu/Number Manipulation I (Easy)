@@ -1,0 +1,7 @@
+def manipulate(n):
+    
+    numStr = str(n)
+    strLen = len(numStr)
+    midPt = strLen / 2 if strLen % 2 == 0 else (strLen - 1) / 2
+    
+    return int("".join([("0" if i >= midPt else digit) for i, digit in enumerate(numStr)]))
