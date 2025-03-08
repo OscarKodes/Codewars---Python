@@ -1,0 +1,1 @@
+unique_in_order = lambda seq: [c for i, c in enumerate(list(seq)) if i == 0 or c != seq[i-1]]
