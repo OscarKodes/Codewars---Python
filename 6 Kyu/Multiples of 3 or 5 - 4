@@ -1,0 +1,11 @@
+def solution(number):
+    
+    nums = []
+    
+    for n in range(number - 1, 1, -1):
+        
+        if n % 3 == 0 or n % 5 == 0:
+            
+            nums.append(n)
+            
+    return sum(nums)
