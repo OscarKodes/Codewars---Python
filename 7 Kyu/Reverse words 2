@@ -1,0 +1,1 @@
+reverse_words = lambda t: " ".join([s[::-1] for s in t.split(" ")])
