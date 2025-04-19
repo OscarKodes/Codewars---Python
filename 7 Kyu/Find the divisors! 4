@@ -1,0 +1,17 @@
+import math
+
+def divisors(integer):
+    
+    nums = []
+    
+    for n in range(2, math.floor(integer / 2) + 1):
+        
+        divided = integer / n
+        
+        if divided % 1 == 0:
+            
+            nums += [int(n), int(divided)]
+            
+    result = list(set(nums))
+    
+    return sorted(result) if len(result) > 0 else str(integer) + " is prime"
