@@ -1,0 +1,29 @@
+def frame(balls):
+    
+    score = 0
+    current = ""
+    numStr = ""
+    
+    getScore = lambda curr, nStr: blz[curr] * (1 if nStr == "" else int(nStr))
+    
+    for c in balls:
+        
+        if c.isnumeric():
+            numStr += c
+        
+        elif c.lower() == c:
+            current += c
+            
+        elif c == "W":
+            return "Foul"
+        
+        else:
+            if len(current) > 0:
+                score += getScore(current, numStr)
+                
+            current = c
+            numStr = ""
+        
+    score += getScore(current, numStr)
+    
+    return 0 if len(balls) == 0 else ("invalid data" if score > 147 else score)
