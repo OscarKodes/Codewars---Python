@@ -1,0 +1,1 @@
+spin_words = lambda s: " ".join([w if len(w) < 5 else w[::-1] for w in s.split(" ")])
