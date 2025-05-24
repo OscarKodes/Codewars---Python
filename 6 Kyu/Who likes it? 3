@@ -1,0 +1,15 @@
+def likes(n):
+    
+    if len(n) == 0:
+        return "no one likes this"
+    
+    elif len(n) == 1:
+        return n[0] + " likes this";
+    
+    elif len(n) == 2:
+        return n[0] + " and " + n[1] + " like this";
+    
+    elif len(n) == 3:
+        return n[0] + ", " + n[1] + " and " + n[2] + " like this";
+
+    return n[0] + ", " + n[1] + " and " + str(len(n) - 2) + " others like this";
