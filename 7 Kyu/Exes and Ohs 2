@@ -1,0 +1,7 @@
+def xo(s):
+    
+    l = s.lower()
+    xCount = len([c for c in l if c == "x"])
+    oCount = len([c for c in l if c == "o"])
+    
+    return xCount == oCount
