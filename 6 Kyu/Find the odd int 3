@@ -1,0 +1,11 @@
+def find_it(seq):
+    
+    numSet = set(seq)
+    
+    for n in numSet:
+        
+        if seq.count(n) % 2 == 1:
+            
+            return n
+        
+    return None
