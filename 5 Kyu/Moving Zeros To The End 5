@@ -1,0 +1,6 @@
+def move_zeros(lst):
+    
+    head = [n for n in lst if n != 0]
+    tail = [0] * lst.count(0)
+    
+    return head + tail
