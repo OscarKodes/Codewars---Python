@@ -1,0 +1,5 @@
+def pig_it(t):
+    
+    pig = [s if (s in "!.?") else s[1:] + s[0] + "ay" for s in t.split(" ")]
+    
+    return " ".join(pig)
