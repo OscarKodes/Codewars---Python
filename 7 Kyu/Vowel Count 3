@@ -1,0 +1,1 @@
+get_count = lambda s: len([c for c in s if c in "aeiou"])
