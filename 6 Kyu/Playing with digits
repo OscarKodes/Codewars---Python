@@ -1,0 +1,5 @@
+def dig_pow(n, p):
+
+    result = sum([int(strN) ** (p + i) for i, strN in enumerate(list(str(n)))])
+    
+    return result / n if result % n == 0 else -1
