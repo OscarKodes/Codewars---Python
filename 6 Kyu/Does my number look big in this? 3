@@ -1,0 +1,5 @@
+def narcissistic( value ):
+    
+    digits = str(value)
+    
+    return sum([int(numStr) ** len(digits) for numStr in digits]) == value
