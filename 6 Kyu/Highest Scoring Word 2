@@ -1,0 +1,8 @@
+ABC = " abcdefghijklmnopqrstuvwxyz"
+
+def high(x):
+    
+    words = x.split(" ")
+    scores = [sum([ABC.index(c) for c in word]) for word in words]
+
+    return words[scores.index(max(scores))]
