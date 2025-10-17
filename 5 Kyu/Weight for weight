@@ -1,0 +1,11 @@
+def order_weight(strng):
+    
+    ls = sorted(strng.split(" "))
+    memberTuples = []
+    
+    for i, numStr in enumerate(ls):
+        
+        total = sum([int(digit) for digit in numStr]) + (i / 100)
+        memberTuples.append((total, numStr))
+
+    return " ".join([member[1] for member in sorted(memberTuples, key=lambda member: member[0])])
