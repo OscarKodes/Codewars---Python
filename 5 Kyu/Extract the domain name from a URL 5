@@ -1,0 +1,9 @@
+def domain_name(url):
+    
+    result = url[:]
+    heads = ["http://", "https://", "www."]
+
+    for head in heads:
+        result = result.replace(head, "")
+        
+    return result.split(".")[0]
