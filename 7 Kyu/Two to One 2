@@ -1,0 +1,1 @@
+longest = lambda a1, a2: "".join(sorted(set(list(a1 + a2))))
