@@ -1,0 +1,1 @@
+cakes = lambda r, a: min([(0 if (k not in list(a)) else a[k] // r[k]) for k in list(r)])
