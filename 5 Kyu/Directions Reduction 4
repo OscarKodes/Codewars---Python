@@ -1,0 +1,15 @@
+def dir_reduc(a):
+    
+    r = []
+    p = {"W":"E","E":"W","S":"N","N":"S"}
+    
+    for d in a:
+        
+        if len(r) > 0 and r[-1][0] == p[d[0]]:
+            r.pop()
+            
+        else:
+            r.append(d)
+            
+    return r
+
