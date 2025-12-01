@@ -1,0 +1,14 @@
+def sum_up_numbers(numbers):
+    
+    cleanFloatList = []
+    
+    for num in numbers:
+    
+        ls = num.replace(",", ".").split(".")
+        cleanFloatList.append(float("".join(ls) if (len(ls) == 1 or len(ls[-1]) > 2) else "".join(ls[:-1]) + "." + ls[-1]))
+        
+    sumStr = str(round(sum(cleanFloatList), 2))
+    dRev = (sumStr if "." not in sumStr or sumStr[-3] == "." else sumStr + "0")[::-1]
+    withComma = [("," + d) if (i > 2 and (i - 2) % 3 == 0 and i != len(dRev) - 1) else d for i, d in enumerate(dRev)]
+
+    return "".join(withComma[::-1])
