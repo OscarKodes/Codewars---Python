@@ -1,0 +1,8 @@
+ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+def find_missing_letter(chars):
+    
+    abcMatch = ABC if chars[0].isupper() else ABC.lower()
+    startIdx = abcMatch.index(chars[0])
+
+    return [c for c in abcMatch[startIdx:startIdx+len(chars)] if c not in chars][0]
