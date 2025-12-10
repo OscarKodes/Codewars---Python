@@ -1,0 +1,1 @@
+digits = lambda n: len(str(n))
