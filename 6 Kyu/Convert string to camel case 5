@@ -1,0 +1,5 @@
+def to_camel_case(t):
+    
+    ls = t.replace("-", "_").split("_")
+
+    return "".join([s.title() if i > 0 else s[0] + s[1:].lower() for i, s in enumerate(ls) if s != ""])
