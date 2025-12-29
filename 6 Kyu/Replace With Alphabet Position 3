@@ -1,0 +1,2 @@
+ABC = "abcdefghijklmnopqrstuvwxyz"
+alphabet_position = lambda s: " ".join([str(ABC.index(c) + 1) for c in s.lower() if c in ABC])
