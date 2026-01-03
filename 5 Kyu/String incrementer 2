@@ -1,0 +1,18 @@
+def increment_string(s):
+    print(s)
+    if len(s) > 0:
+    
+        lastChIdx = None;
+
+        for i, c in enumerate(s):
+            if not c.isnumeric():
+                lastChIdx = i
+
+        head = "" if lastChIdx == None else s[0:lastChIdx+1]
+        numStr = s if lastChIdx == None else s[lastChIdx+1:]
+        tail = "1" if numStr == "" else str(int(numStr) + 1)
+        mid = (len(s) - len(head) - len(tail)) * "0"
+        
+        return head + mid + tail
+    
+    return "1"
