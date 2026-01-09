@@ -1,0 +1,9 @@
+def exchange_with(a, b):
+
+    aEndLength = len(b)
+    
+    while len(b) > 0:
+        a.append(b.pop())
+        
+    while len(a) != aEndLength:
+        b.insert(0, a.pop(0))
