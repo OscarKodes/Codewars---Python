@@ -1,0 +1,9 @@
+toRGB = lambda hex: int(hex, 16)
+
+def hex_string_to_RGB(hex_string): 
+    
+    return {
+        "r": toRGB(hex_string[1:3]),
+        "g": toRGB(hex_string[3:5]),
+        "b": toRGB(hex_string[5:7])
+    }
