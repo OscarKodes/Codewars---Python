@@ -1,0 +1,8 @@
+def is_valid_walk(walk):
+    
+    s = "".join(walk)
+    x = s.count("n") - s.count("s") == 0
+    y = s.count("w") - s.count("e") == 0
+    tenMin = len(s) == 10
+    
+    return x and y and tenMin
