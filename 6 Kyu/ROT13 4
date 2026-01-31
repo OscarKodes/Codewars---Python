@@ -1,0 +1,15 @@
+def rot13(message):
+    
+    ABC = "abcdefghijklmnopqrstuvwxyz"
+    result = ""
+    for c in message:
+        
+        cLow = c.lower()
+        
+        if not c.isalpha():
+            result += c
+        else:
+            rotted = ABC[(ABC.index(cLow) + 13) % 26]
+            result += rotted if cLow == c else rotted.upper() 
+
+    return result
