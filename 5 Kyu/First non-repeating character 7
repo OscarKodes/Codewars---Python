@@ -1,0 +1,12 @@
+def first_non_repeating_letter(s):
+    
+    copy = s[:].lower()
+    
+    for i, c in enumerate(copy):
+        
+        if copy.count(c) == 1:
+            
+            return s[i]
+        
+    return ""
+    
