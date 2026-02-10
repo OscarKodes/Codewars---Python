@@ -1,0 +1,14 @@
+def dir_reduc(arr):
+
+    result = []
+    pairs = ["NS", "SN", "WE", "EW"]
+    
+    for d in arr:
+        
+        if len(result) > 0 and d[0] + result[-1][0] in pairs:
+            result.pop()
+        else:
+            result.append(d)
+            
+    return result
+        
