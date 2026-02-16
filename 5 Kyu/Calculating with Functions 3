@@ -1,0 +1,15 @@
+zero = lambda ls=None: 0 if ls is None else ls[1](0, ls[0])
+one = lambda ls=None: 1 if ls is None else ls[1](1, ls[0])
+two = lambda ls=None: 2 if ls is None else ls[1](2, ls[0])
+three = lambda ls=None: 3 if ls is None else ls[1](3, ls[0])
+four = lambda ls=None: 4 if ls is None else ls[1](4, ls[0])
+five = lambda ls=None: 5 if ls is None else ls[1](5, ls[0])
+six = lambda ls=None: 6 if ls is None else ls[1](6, ls[0])
+seven = lambda ls=None: 7 if ls is None else ls[1](7, ls[0])
+eight = lambda ls=None: 8 if ls is None else ls[1](8, ls[0])
+nine = lambda ls=None: 9 if ls is None else ls[1](9, ls[0])
+
+plus = lambda n1=None, n2=None: [n1,plus] if n2 is None else n1 + n2
+minus = lambda n1=None, n2=None: [n1,minus] if n2 is None else n1 - n2
+times = lambda n1=None, n2=None: [n1,times] if n2 is None else n1 * n2
+divided_by = lambda n1=None, n2=None: [n1,divided_by] if n2 is None else n1 // n2
