@@ -1,0 +1,24 @@
+def getWinner(line):
+    
+    uniques = list(set(line))
+
+    if len(uniques) == 1 and uniques[0] != 0:
+
+        return uniques[0]
+        
+    return None
+
+def is_solved(board):
+    
+    linesToCheck = [
+        *board,
+        [row[col] for col, row in enumerate(board)],
+        [row[2 - col] for col, row in enumerate(board)],
+        *[[row[i] for row in board] for i in range(0, 3)]
+    ]
+    
+    allWinners = [getWinner(line) for line in linesToCheck]
+    winner = list((set(allWinners)))[0]
+    incomplete = sum([1 if 0 in row else 0 for row in board]) > 0
+    
+    return winner if winner != None else (-1 if incomplete else 0)
