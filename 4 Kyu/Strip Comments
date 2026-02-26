@@ -1,0 +1,19 @@
+def getEarliestMarkIdx(line, marks):
+    
+    idx = len(line)
+    
+    for mark in marks:
+        
+        if mark in line:
+            markIdx = line.index(mark)
+            idx = markIdx if markIdx < idx else idx
+    
+    return idx
+
+def strip_comments(str, marks):
+    
+    lines = str.split("\n")
+    
+    cleanedLines = [line[:getEarliestMarkIdx(line, marks)].rstrip() for line in lines]
+    
+    return "\n".join(cleanedLines)
