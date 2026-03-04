@@ -1,0 +1,9 @@
+def find_even_index(a):
+    
+    for i in range(len(a)):
+        
+        if sum(a[:i]) == sum(a[i+1:]):
+            
+            return i
+        
+    return -1
