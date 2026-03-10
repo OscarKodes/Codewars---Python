@@ -1,0 +1,7 @@
+from preloaded import MORSE_CODE
+
+def decode_morse(s):
+    
+    decoded = [" " if code == "" else MORSE_CODE[code] for code in s.split(" ")]
+
+    return "".join(decoded).replace("  ", " ").strip()
