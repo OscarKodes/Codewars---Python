@@ -1,0 +1,1 @@
+unique_in_order = lambda s: [c for i, c in enumerate(s) if i == 0 or c != s[i-1]]
