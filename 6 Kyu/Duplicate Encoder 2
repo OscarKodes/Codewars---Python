@@ -1,0 +1,5 @@
+def duplicate_encode(word):
+    
+    w = word.lower()
+    
+    return "".join(["(" if w.count(c) == 1 else ")" for c in w])
