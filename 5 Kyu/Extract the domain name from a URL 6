@@ -1,0 +1,10 @@
+def domain_name(url):
+    
+    filterTerms = ["http://", "https://", "www."]
+    result = url[:]
+    
+    for term in filterTerms:
+        
+        result = result.replace(term, "")
+        
+    return result.split(".")[0]
