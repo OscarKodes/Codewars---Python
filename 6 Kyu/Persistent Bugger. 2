@@ -1,0 +1,16 @@
+def persistence(n):
+
+    result = 0
+    num = n
+
+    while num >= 10:
+        
+        product = 1
+        
+        for digit in str(num):
+            product *= int(digit)
+            
+        num = product
+        result += 1
+
+    return result
