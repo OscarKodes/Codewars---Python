@@ -1,0 +1,1 @@
+comp = lambda a1, a2: False if None in [a1, a2] else sorted(a2) == sorted([n**2 for n in a1])
