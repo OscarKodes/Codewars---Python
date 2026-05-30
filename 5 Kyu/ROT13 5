@@ -1,0 +1,17 @@
+ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+def rot13(message):
+
+    result = ""
+    
+    for c in message:
+        
+        if c.isalpha():
+            newIndex = (ABC.index(c.upper()) + 13) % 26
+            rotted = ABC[newIndex]
+            result += rotted if c.isupper() else rotted.lower()
+            
+        else:
+            result += c
+            
+    return result
