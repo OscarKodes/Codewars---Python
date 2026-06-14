@@ -1,0 +1,16 @@
+def strip_comments(str, markers):
+    
+    ls = str.split("\n")
+    result = []
+    
+    for s in ls:
+        
+        noMarks = s
+        
+        for mark in markers:
+            
+            noMarks = (noMarks.split(mark) + [None])[0]
+            
+        result.append(noMarks.rstrip())
+        
+    return "\n".join(result)
