@@ -1,0 +1,1 @@
+count_bits = lambda n: len("".join(bin(n)[2:].split("0")))
