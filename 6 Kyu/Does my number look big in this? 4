@@ -1,0 +1,5 @@
+def narcissistic(v):
+    
+    ls = list(str(v))
+
+    return sum([int(s) ** len(ls) for s in ls]) == v
