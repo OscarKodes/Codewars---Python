@@ -1,0 +1,6 @@
+function dnaStrand(dna){
+  
+  s = "ATACGC";
+  
+  return dna.split("").map(c => s[s.indexOf(c) + 1]).join("")
+}
