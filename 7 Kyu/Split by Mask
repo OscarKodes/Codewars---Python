@@ -1,0 +1,14 @@
+def split_by_mask(s, m):
+    
+    if sum(m) != len(s):
+        return None
+    
+    ls = s[:]
+    j = 0
+    result = []
+    
+    for n in m:
+        result.append("".join(ls[j + 0: j + n]))
+        j += n
+    
+    return result
