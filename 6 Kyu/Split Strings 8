@@ -1,0 +1,9 @@
+def solution(s):
+    
+    sCopy = s[:] + "_" if len(s) % 2 == 1 else s[:]
+    result = []
+
+    for i in range(0, len(sCopy), 2):
+        result.append(sCopy[i : i + 2])
+        
+    return result
